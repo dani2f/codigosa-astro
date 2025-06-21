@@ -1,0 +1,233 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import { getFeaturedProjects } from "../lib/wp";
+import FeaturedProject from "../components/subComponents/FeaturedProject.astro";
+
+
+const data = await getFeaturedProjects();
+---
+
+
+<Layout>
+  <slot slot="head">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Codigosa es tu empresa de desarrollo web en Bilbao. Ofrecemos soluciones web económicas y personalizadas para digitalizar tu negocio. Contacta con nosotros."
+    />
+    <meta
+      name="keywords"
+      content="diseño web Bilbao, empresa de desarrollo web, diseño web económico, Codigosa, agencia marketing Bilbao, diseño web en bilbao"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Codigosa - Desarrollo Web en Bilbao" />
+    <meta
+      property="og:description"
+      content="Codigosa es tu empresa de desarrollo web en Bilbao. Ofrecemos soluciones web económicas y personalizadas para digitalizar tu negocio. Contacta con nosotros."
+    />
+
+    <meta property="og:url" content="https://www.codigosa.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Codigosa - Desarrollo Web en Bilbao" />
+    <meta
+      name="twitter:description"
+      content="Codigosa es tu empresa de desarrollo web en Bilbao. Ofrecemos soluciones web económicas y personalizadas para digitalizar tu negocio. Contacta con nosotros."
+    />
+
+
+    <title>Codigosa | Diseño web en Bilbao</title>
+
+    <!-- Datos estructurados para mejorar el SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Codigosa",
+        "url": "https://www.codigosa.es",
+        "sameAs": [
+          "https://www.facebook.com/codigosa",
+          "https://www.twitter.com/codigosa"
+        ]
+      }
+    </script>
+  </slot>
+
+  <main slot="main">
+    <!-- PORTADA -->
+
+    <section class="portada-inicio" id="portada-inicio">
+      <div class="content-portada-inicio">
+        <div class="cajasTextosPortada-inicio">
+          <h1>
+            LLEVA TU EMPRESA AL MUNDO CON
+            <span class="bernadette amarillo">codigosa</span>
+          </h1>
+          <p class="h2fake-inicio">
+            Tu agencia de desarrollo web de confianza en
+            <span class="bernadette amarillo">Bilbao</span>. Te ayudamos a
+            digitalizar tu empresa con soluciones web económicas y
+            personalizadas.
+          </p>
+        </div>
+
+        <video
+          autoplay
+          muted
+          loop
+          src="/video/CodigosaVideoWebmPc.webm"
+          type="video/webm"></video>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+
+    <section id="servicios-inicio">
+      <div class="pelotaNegra-inicio pelota1-inicio"></div>
+      <div class="pelotaNegra-inicio pelota2-inicio"></div>
+      <div class="pelotaNegra-inicio pelota3-inicio"></div>
+
+      <div id="titulo-inicio" class="animar">
+        <h2 id="p1-inicio">SERVICIOS</h2>
+        <h2 id="p2-inicio"><span class="bernadette">servicios</span></h2>
+      </div>
+
+      <div class="grid-parent-inicio">
+        <div class="grid-child-inicio animar">
+          <div class="grid-box-inicio">
+            <Image  
+              class="grid-logo-inicio"          
+              src="/img/logos/logosServicios/desarrolloWeb.svg"
+              alt="Logo de desarrollo web"
+              height={130}
+              width={200}/> 
+            <h3>Desarrollo Web</h3>
+            <p>
+              Ofrecemos desarrollo web personalizado, creando sitios rápidos,
+              seguros y accesibles. Diseñamos páginas atractivas y funcionales
+              para atraer clientes y generar oportunidades, desde sitios
+              informativos hasta tiendas en línea y plataformas avanzadas.
+            </p>
+            <a href="servicios.html#servicio1">Ver más</a>
+          </div>
+        </div>
+        <div class="grid-child-inicio animar">
+          <div class="grid-box-inicio">
+            
+             <Image  
+              class="grid-logo-inicio"          
+              src="/img/logos/logosServicios/mantenimiento_web.svg"
+              alt="Logo de Mantenimiento web"
+              height={130}
+              width={200}/>
+
+            <h3>Mantenimiento Web</h3>
+            <p>
+              Ofrecemos mantenimiento web completo, asegurando funcionamiento
+              óptimo, seguridad, actualizaciones, optimización de velocidad,
+              corrección de errores y copias de seguridad para una experiencia
+              estable y segura.
+            </p>
+            <a href="servicios.html#servicio4">Ver más</a>
+          </div>
+        </div>
+        <div class="grid-child-inicio animar">
+          <div class="grid-box-inicio">
+
+            <Image  
+              class="grid-logo-inicio"
+              src="/img/logos/logosServicios/diseñoWeb.svg"
+              alt="Logo de diseño web"
+              height={130}
+              width={200}/>
+    
+
+            <h3>Diseño Web</h3>
+            <p>
+              Mejoramos tu visibilidad en buscadores con estrategias efectivas,
+              optimizando contenido y palabras clave para atraer clientes y
+              aumentar tráfico de forma orgánica.
+            </p>
+            <a href="servicios.html#servicio2">Ver más</a>
+          </div>
+        </div>
+        <div class="grid-child-inicio animar">
+          <div class="grid-box-inicio">
+            <Image  
+            class="grid-logo-inicio"
+            src="/img/logos/logosServicios/seo.svg"
+            alt="Logo de SEO"
+            height={130}
+            width={200}/>
+  
+            <h3>Posicionamiento Web</h3>
+            <p>
+              Mejoramos la visibilidad de tu web con estrategias efectivas,
+              optimizando contenido y palabras clave para aumentar tráfico,
+              atraer clientes y destacar frente a la competencia de forma
+              orgánica.
+            </p>
+            <a href="servicios.html#servicio3">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="triangle-inicio"></div>
+    </section>
+
+    <!-- DESTACADOS -->
+
+    <section id="destacado-inicio">
+      <h2 id="destacadosTitulo-inicio">DESTACADOS</h2>
+
+      <article class="animar">
+        {
+          data.map((data) => (
+            //El featured hace que pete
+            <FeaturedProject 
+              
+              href={`/proyectosIndividuales/${data.slug}`}
+              img={data.acf.imagen_destacada["url"]}
+              title={data.acf.titulo_portada}
+              description={data.acf.descripcion_destacada}
+            />
+          ))
+        }
+       
+      </article>
+    </section>
+
+    <!-- CTA -->
+
+    <section id="cta-inicio">
+      <div class="container-cta-inicio">
+        <p>
+          Contáctanos ahora para descubrir soluciones profesionales y
+          personalizadas para <span class="bold">alcanzar tus objetivos</span>.
+        </p>
+        <div class="buttons-cta-inicio">
+          <a class="button-cta-inicio" href="/contacto">Contáctanos</a>
+          <a class="button-cta-vacio-inicio" href="/agencia">Conócenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLECHA -->
+
+    <a class="flecha" href="#portada-inicio">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        >
+        </path>
+      </svg>
+    </a>
+  </main>
+</Layout>

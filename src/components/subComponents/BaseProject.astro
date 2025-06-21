@@ -1,0 +1,229 @@
+---
+let {
+  titulo_portada,
+  imagen_1_portada,
+  imagen_2_portada,
+  titulo_tematica,
+  imagen_1_tematica,
+  imagen_2_tematica,
+  imagen_3_tematica,
+  imagen_4_tematica,
+  imagen_1_identidad,
+  imagen_2_identidad,
+  imagen_1_objetivos,
+  imagen_2_objetivos,
+  imagen_3_objetivos,
+  imagen_4_objetivos,
+  imagen_1_personalidad,
+  imagen_2_personalidad,
+  imagen_3_personalidad,
+  imagen_4_personalidad,
+  color_1_paleta_de_colores,
+  color_2_paleta_de_colores,
+  color_3_paleta_de_colores,
+  color_4_paleta_de_colores,
+  tipografia_1_tipografias,
+  tipografia_2_tipografias,
+  duracion_tiempos,
+  ejecucion_tiempos,
+  nextProject,
+  previousProject,
+  clases_adicionales = "",
+} = Astro.props;
+---
+
+<section>
+  <img class="obj1 invisible" src={imagen_1_portada["url"]} alt="" />
+  <img
+    class={`obj1 invisible ${clases_adicionales.includes("fotoMv2") ? "fotoMv2" : ""}`}
+    src={imagen_2_portada["url"]}
+    alt={imagen_2_portada["alt"]}
+  />
+  <h2 class="animar2">{titulo_portada}</h2>
+</section>
+
+<section>
+  <img
+    class="obj1 rounded invisible sombra"
+    src={imagen_1_tematica["url"]}
+    alt={imagen_1_tematica["alt"]}
+  />
+  <img
+    class="obj1 rounded invisible sombra"
+    src={imagen_2_tematica["url"]}
+    alt={imagen_2_tematica["alt"]}
+  />
+  <img
+    class="obj1 rounded invisible sombra"
+    src={imagen_3_tematica["url"]}
+    alt={imagen_3_tematica["alt"]}
+  />
+  <img
+    class="obj1 rounded invisible sombra"
+    src={imagen_4_tematica["url"]}
+    alt={imagen_4_tematica["alt"]}
+  />
+  <h2 class="animar2">{titulo_tematica}</h2>
+</section>
+
+<section>
+  <img
+    class={`obj1 invisible ${clases_adicionales.includes("logoVerticalProyectosIndividuales") ? "logoVerticalProyectosIndividuales" : ""}`}
+    src={imagen_1_identidad["url"]}
+    alt={imagen_1_identidad["alt"]}
+  />
+  {
+    imagen_2_identidad ? (
+      <img
+        class={`obj1 invisible ${clases_adicionales.includes("logoVerticalProyectosIndividuales") ? "logoVerticalProyectosIndividuales" : ""}`}
+        src={imagen_2_identidad["url"]}
+        alt={imagen_2_identidad["alt"]}
+      />
+    ) : (
+      <h3 class="rounded invisible bernadette amarillo obj1">emblema</h3>
+    )
+  }
+  <h3 class="rounded invisible bernadette amarillo obj1">marca</h3>
+  <h2 class="animar2">IDENTIDAD</h2>
+</section>
+
+<section>
+  <img
+    src={imagen_1_objetivos["url"]}
+    alt={imagen_1_objetivos["alt"]}
+    class="obj1 rounded invisible"
+  />
+  <img
+    src={imagen_2_objetivos["url"]}
+    alt={imagen_2_objetivos["alt"]}
+    class="obj1 rounded invisible"
+  />
+  <img
+    src={imagen_3_objetivos["url"]}
+    alt={imagen_3_objetivos["alt"]}
+    class="obj1 rounded invisible"
+  />
+  <img
+    src={imagen_4_objetivos["url"]}
+    alt={imagen_4_objetivos["alt"]}
+    class="obj1 rounded invisible"
+  />
+
+  <h2 class="animar2">OBJETIVOS</h2>
+</section>
+
+<section>
+  <img
+    class={`obj1 rounded invisible ${clases_adicionales.includes("imgHorizontal") ? "imgHorizontal" : ""}`}
+    src={imagen_1_personalidad["url"]}
+    alt={imagen_1_personalidad["alt"]}
+  />
+  <img
+    class={`obj1 rounded invisible ${clases_adicionales.includes("imgHorizontal") ? "imgHorizontal" : ""}`}
+    src={imagen_2_personalidad["url"]}
+    alt={imagen_2_personalidad["alt"]}
+  />
+  <img
+    class={`obj1 rounded invisible ${clases_adicionales.includes("imgHorizontal") ? "imgHorizontal" : ""}`}
+    src={imagen_3_personalidad["url"]}
+    alt={imagen_3_personalidad["alt"]}
+  />
+  <img
+    class={`obj1 rounded invisible ${clases_adicionales.includes("imgHorizontal") ? "imgHorizontal" : ""}`}
+    src={imagen_4_personalidad["url"]}
+    alt={imagen_4_personalidad["alt"]}
+  />
+  <h2 class="animar2">PERSONALIDAD</h2>
+</section>
+
+<section>
+  <div
+    class="obj1 rounded invisible"
+    style={`background-color: ${color_1_paleta_de_colores}`}
+  >
+  </div>
+  <div
+    class="obj1 rounded invisible"
+    style={`background-color: ${color_2_paleta_de_colores}`}
+  >
+  </div>
+  <div
+    class="obj1 rounded invisible"
+    style={`background-color: ${color_3_paleta_de_colores}`}
+  >
+  </div>
+  <div
+    class="obj1 rounded invisible"
+    style={`background-color: ${color_4_paleta_de_colores}`}
+  >
+  </div>
+  <h2 class="animar2">PALETA DE COLORES</h2>
+</section>
+
+<section>
+  <img
+    class={`obj1 invisible ${clases_adicionales.includes("tipografiaMasGrande") ? "tipografiaMasGrande" : ""}`}
+    class="obj1 invisible tipografiaMasGrande"
+    src={tipografia_1_tipografias["url"]}
+    alt={tipografia_1_tipografias["alt"]}
+  />
+  <img
+    class="obj1 invisible"
+    src={tipografia_2_tipografias["url"]}
+    alt={tipografia_2_tipografias["alt"]}
+  />
+
+  <h2 class="animar2">TIPOGRAFÍA</h2>
+</section>
+
+<section>
+  <div class="invisible obj1">
+    <p class="bernadette amarillo">Duración</p>
+    <h3 class="bernadette amarillo">{duracion_tiempos}</h3>
+  </div>
+
+  <div class="invisible obj1">
+    <p class="bernadette amarillo">Ejecución</p>
+    <h3 class="bernadette amarillo">{ejecucion_tiempos}</h3>
+  </div>
+
+  <img
+    src="/img/logos/logosProyectoIndividual/relojDeArena.svg"
+    alt="Logo de reloj de arena"
+    class="obj1 rounded invisible"
+  />
+  <img
+    src="/img/logos/logosProyectoIndividual/calendario.svg"
+    alt="Logo de calendario"
+    class="obj1 rounded invisible"
+  />
+  <h2 class="animar2">TIEMPOS</h2>
+</section>
+
+<section style="margin-bottom: 20vh;">
+  <a style="text-decoration: none;"
+    class="proyectos-individuales anterior invisible"
+    href={`/proyectosIndividuales/${previousProject}`}
+  >
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      >
+      </path>
+    </svg>
+    <h3>Anterior</h3>
+  </a>
+  <h2 class="animar2">PROYECTOS</h2>
+  <a style="text-decoration: none;"
+    class="proyectos-individuales siguiente invisible"
+    href={`/proyectosIndividuales/${nextProject}`}
+  >
+    <h3>Siguiente</h3>
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      >
+      </path>
+    </svg>
+  </a>
+</section>

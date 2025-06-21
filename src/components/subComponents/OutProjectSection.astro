@@ -1,0 +1,41 @@
+---
+let { id, href, img, title, description } = Astro.props;
+---
+
+{
+  id % 2 == 0 ? (
+    <section class="proyecto">
+      <div class="triangle1-proyectos" />
+      <div class="pelotaNegra-proyectos pelota1-proyectos" />
+      <div class="pelotaNegra-proyectos pelota2-proyectos" />
+
+      <div class="container-proyectos animar">
+        <div id="content-proyectos">
+          <a href={href}>
+            <img src={img} alt={`Imagen del proyecto de ${title}`} />
+          </a>
+
+          <p>{description}</p>
+        </div>
+
+        <div class="vertical-text-proyectos">{title}</div>
+      </div>
+
+      <div class="triangle2-proyectos" />
+    </section>
+  ) : (
+    <section class="proyecto2">
+      <div class="pelotaAmarilla-proyectos pelota4-proyectos" />
+      <div class="pelotaAmarilla-proyectos pelota5-proyectos" />
+      <div class="container-proyectos2 animar">
+        <div class="vertical-text2-proyectos">{title}</div>
+        <div id="content-proyectos2">
+          <a href={href}>
+            <img src={img} alt={`Imagen del proyecto de ${title}`} />
+          </a>
+          <p>{description}</p>
+        </div>
+      </div>
+    </section>
+  )
+}

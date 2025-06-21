@@ -1,0 +1,5050 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: 'Bernadette';
+  src:
+    url('/fonts/bernadette.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Uso: */
+body {
+  font-family: 'Bernadette', sans-serif;
+}
+
+/* Ejemplo de uso por defecto */
+body {
+  font-family: 'Bernadette', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFDC84;
+    border-radius: 17px;
+    border: 3px solid #141414;
+    transition: background-color 0.3s ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  border: 1px solid #fff !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Montserrat";
+    scroll-behavior: smooth;
+    background-color: #141414;
+    overflow-x: hidden;
+}
+
+.bernadette {
+    color: #000;
+    font-family: "Bernadette";
+    font-weight: lighter;
+}
+
+.rounded {
+    border-radius: 1rem;
+    transform: rotate(45deg);
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.amarillo {
+    color: #ffdc84;
+}
+
+.sombra {
+    box-shadow: 10px 10px 30px #0005;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.animar,
+.animar2 {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-out;
+}
+
+.animar.visible,
+.animar2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animar2.visible2 {
+    opacity: 0.05;
+}
+
+/* HEADER */
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 41px;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+}
+
+.burger input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 0px;
+}
+
+.burger input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 0px;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 1em 0;
+}
+
+nav ul li a {
+    width: 100%;
+    display: block;
+}
+
+nav.open {
+    display: flex;
+}
+
+.contain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#burgerLogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-inline: 5%;
+}
+
+.logo {
+    width: 85px;
+}
+
+.logos {
+    padding: 20px 0;
+    padding-right: 9%;
+}
+
+.menu a {
+    padding: 0;
+}
+
+header {
+    background-color: rgb(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 0rem;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    transition: 0.5s;
+}
+
+#headerMv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header.abajo {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header.abajo .burger span {
+    background: black;
+}
+
+header.abajo ul li a {
+    color: #000;
+}
+
+header.abajo span {
+    color: #000;
+}
+
+.menu {
+    top: 60px;
+    left: 0;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.menu a {
+    padding: 0;
+}
+
+.menu div {
+    display: block;
+    padding: 6px 0px;
+    cursor: pointer;
+}
+
+.menu img {
+    width: 100px;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 2px 2px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 350ms;
+    transition-property: color;
+    position: relative;
+}
+
+.menu li:last-of-type {
+    padding-bottom: 15px;
+}
+
+.menu a:focus:after,
+.menu a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.menu a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--after-background-color, #fff);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* HEADER */
+
+/* INICIO / INICIO / INICIO */
+
+/* PORTADA INICIO */
+
+.portada-inicio {
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content-portada-inicio {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-portada-inicio h1 {
+    margin: 0;
+    font-size: 1.5em;
+    max-width: 100%;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.cajasTextosPortada-inicio {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-portada-inicio img {
+    max-width: 50%;
+}
+
+.h2fake-inicio {
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.content-portada-inicio video {
+    display: none;
+}
+
+/* PORTADA INICIO */
+
+/* SERVICIOS INICIO */
+
+#titulo-inicio {
+    margin-top: 15%;
+    height: 5rem;
+}
+
+#p1-inicio {
+    font-size: 3em;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #837042;
+    color: transparent;
+    text-shadow: 1px 1px 7.5px #ffdc84;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin: 0 auto;
+    z-index: -100;
+    width: 100%;
+    filter: blur(1.7px);
+}
+
+
+#p2-inicio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -3.5rem;
+    margin: 0;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #000000;
+}
+
+#servicios-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffdc84;
+}
+
+.grid-parent-inicio {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+    margin-block: 10%;
+}
+
+.grid-child-inicio {
+    background-color: #141414;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    grid-column: 1 / span 7;
+    grid-row: span 4 / span 4;
+}
+
+.grid-logo-inicio {
+    width: 8rem;
+}
+
+.grid-box-inicio {
+    width: 80%;
+    margin-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-child-inicio h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+ .grid-box-inicio a {
+    display: inline-block;
+    color: #FFDC84;
+    text-decoration: none;
+
+    display: block;
+    text-decoration: none;
+
+    padding: 2px 2px;
+    border: none;
+    background: none;
+
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 350ms;
+    transition-property: color;
+    position: relative;
+}
+
+
+.grid-box-inicio a:focus:after,
+.grid-box-inicio a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.grid-box-inicio a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--after-background-color, #FFDC84);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* Pelotas Servicios Inicio */
+
+.pelota1-inicio {
+    display: none;
+}
+
+.pelota2-inicio {
+    display: none;
+}
+
+.pelota3-inicio {
+    display: none;
+}
+
+.triangle-inicio {
+    width: 100%;
+    height: 3rem;
+    background-color: #141414;
+    clip-path: polygon(37% 0%, -4.5% 101%, 102% 101%);
+}
+
+/* Pelotas Servicios Inicio */
+
+/* SERVICIOS INICIO */
+
+/* DESTACADOS INICIO */
+
+#destacado-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffdc84;
+    padding-block: 5rem;
+}
+
+#destacadosTitulo-inicio {
+    top: 0;
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+}
+
+#destacado-inicio article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.proyectoDestacado-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proyectoDestacado-inicio p {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.proyectoDestacado-inicio h3 {
+    margin-block: 1rem;
+    font-size: 1.5rem;
+}
+
+.proyectoDestacado-inicio img {
+    width: 100%;
+}
+
+.proyectoDestacado-inicio div {
+    color: #fff;
+    width: 70%;
+}
+
+.destacadoImagen-inicio {
+    overflow: hidden;
+}
+
+.proyectoDestacado-inicio img {
+    transition: transform 0.5s ease;
+}
+
+.proyectoDestacado-inicio img:hover {
+    transform: scale(1.1);
+}
+
+/* DESTACADOS INICIO */
+
+/* CTA INICIO */
+
+#cta-inicio {
+    font-family: "Montserrat";
+    background-color: #ffdc84;
+    padding: 5rem 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-cta-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 85%;
+    gap: 2rem;
+}
+
+.container-cta-inicio p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.buttons-cta-inicio {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons-cta-inicio a {
+    font-family: "Montserrat";
+    font-size: small;
+    width: 40%;
+    padding: 9px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.buttons-cta-inicio a:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 0rem;
+    background-color: #1f1f1f;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.buttons-cta-inicio a:first-child:hover {
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.205);
+}
+
+.buttons-cta-inicio a:first-child:hover::before {
+    width: 100%;
+}
+
+.buttons-cta-inicio a:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 0rem;
+    background-color: #ffe9b1;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.buttons-cta-inicio a:nth-child(2):hover {
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.205);
+}
+
+.buttons-cta-inicio a:nth-child(2):hover::before {
+    width: 100%;
+}
+
+.button-cta-inicio {
+    background: black;
+    color: white;
+}
+
+.button-cta-vacio-inicio {
+    background-color: transparent;
+    color: #000;
+}
+
+/* CTA INICIO */
+
+/* INICIO / INICIO / INICIO */
+
+/* AGENCIA / AGENCIA / AGENCIA */
+
+/* PORTADA AGENCIA */
+
+.portada-agencia {
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+
+
+
+}
+
+.content-portada-agencia {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+}
+
+.content-portada-agencia h1 {
+    margin: 0;
+    font-size: 2em;
+    max-width: 90%;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+.content-portada-agencia img {
+    filter: grayscale(1);
+    object-fit: contain;
+}
+
+#fotosPortada-agencia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.foto-lonja-agencia {
+    max-width: 50%;
+    width: 20rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(40%, 0%);
+}
+
+.foto-trabajando-agencia {
+    width: 14rem;
+    transform: translate(-25%, 30%);
+    z-index: 2;
+}
+
+.pelota1-agencia {
+    display: none;
+}
+
+.pelota2-agencia {
+    display: none;
+}
+
+/* PORTADA AGENCIA */
+
+/* METODOLOGIA AGENCIA */
+
+#titulo-agencia {
+    margin-block: 20%;
+    margin-bottom: 0;
+}
+
+#p1-agencia {
+    font-size: 2.2em;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #837042;
+    color: transparent;
+    text-shadow: 1px 1px 7.5px #FFDC84;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin: 0 auto;
+    z-index: -100;
+    width: 100%;
+    filter: blur(1.7px);
+}
+
+#p2-agencia {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -2.5rem;
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: #000000;
+}
+
+#metodologiaSeccion-agencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFDC84;
+}
+
+#seccionTextosMetodologia-agencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 8rem;
+}
+
+.articulo1-agencia,
+.articulo2-agencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.articulo1-agencia h3,
+.articulo2-agencia h3 {
+    margin-block: 0.5rem;
+}
+
+.articulo1-agencia img,
+.textoArticulo1-agencia,
+.articulo2-agencia img,
+.textoArticulo2-agencia {
+    width: 100%;
+}
+
+.textoArticulo1-agencia p,
+.textoArticulo2-agencia p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.textoArticulo1-agencia h3,
+.textoArticulo2-agencia h3 {
+    font-weight: 400;
+    margin-block: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Bernadette';
+}
+
+/* METODOLOGIA AGENCIA */
+
+/* CARRUSEL AGENCIA */
+
+#seccionCarrousellImagenes-agencia {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-agencia {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-track-agencia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: scroll-agencia 15s ease-in-out infinite;
+    padding-block: 5rem;
+}
+
+.carousel-track-agencia img {
+    filter: grayscale(1);
+}
+
+.carousel-slide-agencia {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin: 0 -7%;
+}
+
+.carousel-slide-agencia img {
+    width: 80%;
+    display: block;
+}
+
+@keyframes scroll-agencia {
+
+    0% {
+        transform: translateX(86%);
+    }
+
+    20% {
+        transform: translateX(86%);
+    }
+
+    25% {
+        transform: translateX(0%);
+    }
+
+    45% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-86%);
+    }
+
+    70% {
+        transform: translateX(-86%);
+    }
+
+    75% {
+        transform: translateX(86%);
+    }
+
+    100% {
+        transform: translateX(86%);
+    }
+
+}
+
+
+/* CARRUSEL AGENCIA */
+
+/* INTEGRANTES AGENCIA */
+
+#seccionIntegrantes-agencia {
+    background-color: #FFDC84;
+}
+
+.cards-agencia {
+    width: 100%;
+    padding-block: 8rem;
+    padding-top: 0rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.container-card-agencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-card-agencia > p {
+    font-weight: 400;
+    font-size: 2.4rem;
+    font-family: 'Bernadette';
+    margin-block: 1rem;
+}
+
+.cards-agencia a {
+    text-decoration: none;
+}
+
+.card-agencia {
+    width: 245px;
+    height: 315px;
+    border-radius: 20em;
+    background: #dfdff5;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 20px rgba(43, 8, 37, 0.2);
+    margin-inline: 1rem;
+}
+
+.card-info-agencia {
+    position: relative;
+    z-index: 3;
+    color: #f5f5f5;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 0.5s;
+    width: 350px;
+    height: 62%;
+    text-align: center;
+}
+
+.overlay-agencia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.text-title-agencia {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card-img-agencia {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+.card-agencia:hover {
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.card-agencia:hover {
+    opacity: 1;
+}
+
+.card-agencia:hover .card-info-agencia {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-agencia:hover .overlay-agencia {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#seccionTriangulos-agencia {
+    display: flex;
+    flex-direction: row;
+}
+
+.triangle1-agencia {
+    width: 170%;
+    height: 2rem;
+    background-color: #141414;
+    clip-path: polygon(-10% -16%, 50% 100%, 104% 0%);
+}
+
+.triangle2-agencia {
+    width: 30%;
+    height: 1.5rem;
+    background-color: #141414;
+    clip-path: polygon(-23% -10%, 100% 100%, 200% 0%);
+}
+
+/* INTEGRANTES AGENCIA */
+
+/* AGENCIA / AGENCIA / AGENCIA */
+
+/* SERVICIOS / SERVICIOS / SERVICIOS */
+
+/* PORTADA SERVICIOS */
+
+.portada-servicios {
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-portada-servicios {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-portada-servicios h1 {
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.portada-servicios .light-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 100% 100%, rgba(255,220,150,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(255,200,100,0.2) 0%, transparent 50%);
+    filter: blur(100px);
+    z-index: 2;
+}
+
+/* PORTADA SERVICIOS */
+
+/* SERVICIOS SERVICIOS */
+
+/* pares */
+
+.serviciosInpar-servicios {
+    background-color: #FFDC84;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.container-servicios {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.container-servicios h2 {
+    width: 75vw;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0rem 0.2rem 0.2rem #0004;
+    margin: 0;
+}
+
+.container-servicios p {
+    font-size: 0.8em;
+    text-align: left;
+    font-weight: 300;
+    margin: 0;
+}
+
+.circle-servicios {
+    background-color: #FFDC84;
+    height: 12rem;
+    clip-path: circle(210% at 50% 350%);
+}
+
+/* impares */
+
+.serviciosPar-servicios {
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.container-servicios2 {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.container-servicios2 h2 {
+    width: 75vw;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0rem 0.2rem 0.2rem #0004;
+    margin: 0;
+}
+
+.container-servicios2 p {
+    font-size: 0.8em;
+    color: #fff;
+    text-align: left;
+    font-weight: 300;
+    margin: 0;
+}
+
+.circle2-servicios {
+    background-color: #FFDC84;
+    height: 12rem;
+    clip-path: circle(220% at 50% 350%);
+    transform: rotate(180deg);
+}
+
+/* Carrusel */
+
+.carousel-servicios {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images-servicios {
+    display: flex;
+    width: max-content;
+    animation: scroll-servicios 90s linear infinite;
+}
+
+.carousel-images-servicios a {
+    width: 300px;
+    padding: 0 40px;
+}
+
+.carousel-images-servicios img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    box-shadow: 0.3rem 0.3rem 1rem #0005;
+}
+
+.carousel-images-servicios img:hover,
+.carousel-images2-servicios img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-images2-servicios {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll2-servicios 50s linear infinite;
+}
+
+.carousel-images2-servicios a {
+    width: 100%;
+    padding: 0 10rem;
+    margin-inline: -15rem;
+}
+
+.carousel-images2-servicios img {
+    width: 20%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+@keyframes scroll2-servicios {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-66.7%);
+    }
+
+}
+
+@keyframes scroll-servicios {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-75%);
+    }
+
+}
+
+/* pelotas */
+
+.pelota1-servicios {
+    display: none;
+}
+
+.pelota2-servicios {
+    display: none;
+}
+
+.pelota3-servicios {
+    display: none;
+}
+
+/* SERVICIOS SERVICIOS */
+
+/* SERVICIOS / SERVICIOS / SERVICIOS */
+
+/* PROYECTOS / PROYECTOS / PROYECTOS */
+
+/* PORTADA PROYECTOS */
+
+.portada-proyectos {
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.content-portada-proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-portada-proyectos h1 {
+    width: 80%;
+    font-size: 1.8em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 3rem;
+    width: 90%;
+}
+
+.portada-proyectos .light-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 100% 100%, rgba(255,220,150,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(255,200,100,0.2) 0%, transparent 50%);
+    filter: blur(100px);
+    z-index: 2;
+}
+
+/* PORTADA PROYECTOS */
+
+/* PROYECTOS PROYECTOS */
+
+/* Impares */
+
+.proyecto {
+    background-color: #FFDC84;
+}
+
+#content-proyectos {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 5%;
+}
+
+#content-proyectos a {
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#content-proyectos img {
+    width: 100%;
+    margin-top: 3%;
+    transition: transform 0.5s ease;
+}
+
+#content-proyectos img:hover {
+    transform: scale(1.1);
+}
+
+#content-proyectos p {
+    width: 80%;
+    margin-top: 7%;
+    font-size: 0.73em;
+    font-weight: normal;
+}
+
+.container-proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5px;
+    border-radius: 10px;
+}
+
+.vertical-text-proyectos {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.triangle1-proyectos {
+    width: 100%;
+    height: 7rem;
+    background-color: #141414;
+    clip-path: polygon(0% 0%, 100% -8%, 100% 100%);
+}
+
+/* Pares */
+
+.proyecto2 {
+    background-color: #141414;
+}
+
+#content-proyectos2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+    margin-right: 6%;
+}
+
+#content-proyectos2 a {
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#content-proyectos2 img {
+    width: 100%;
+    margin-top: 3%;
+    transition: transform 0.5s ease;
+}
+
+#content-proyectos2 img:hover {
+    transform: scale(1.1);
+}
+
+#content-proyectos2 p {
+    width: 80%;
+    margin-top: 7%;
+    color: #fff;
+    font-size: 0.73em;
+    font-weight: normal;
+}
+
+.container-proyectos2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5px;
+    border-radius: 10px;
+}
+
+.vertical-text2-proyectos {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 3em;
+    font-weight: bold;
+    color: #FFDC84;
+}
+
+.triangle2-proyectos {
+    width: 100%;
+    height: 7rem;
+    background-color: #141414;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 101%);
+}
+
+/* Pelotas */
+
+.pelota1-proyectos {
+    display: none;
+}
+
+.pelota2-proyectos {
+    display: none;
+}
+
+.pelota3-proyectos {
+    display: none;
+}
+
+.pelota4-proyectos {
+    display: none;
+}
+
+.pelota5-proyectos {
+    display: none;
+}
+
+/* PROYECTOS PROYECTOS */
+
+/* PROYECTOS / PROYECTOS / PROYECTOS */
+
+/* CONTACTO / CONTACTO / CONTACTO */
+
+/* PORTADA CONTACTO */
+
+.portada-contacto {
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 13%;
+    padding-bottom: 13%;
+    height: 100%;
+}
+
+.content-portada-contacto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-portada-contacto h1 {
+    font-size: 3em;
+    max-width: 100%;
+}
+
+.content-portada-contacto img {
+    filter: grayscale(1);
+    object-fit: contain;
+}
+
+#seccionPortadaDecorado-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#seccionPortadaDecorado-contacto h1 {
+    margin: 0;
+    line-height: 3.5rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#seccionPortadaDecorado-contacto span {
+    color: #FFDC84;
+    font-weight: 100;
+}
+
+#seccionPortadaDecorado-contacto p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0rem;
+    margin-bottom: 5rem;
+}
+
+#fotosPortada-contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Formulario */
+
+#formulario-contacto {
+    background-color: #141414;
+    box-shadow: 0rem 0rem 1.5rem #0008;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 80%;
+    height: 100%;
+    font-weight: 100;
+}
+
+#formulario-contacto input,
+#formulario-contacto input,
+#formulario-contacto textarea {
+    font-family: 'Montserrat';
+}
+
+.bloqueForm1-contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cajaTexto-contacto {
+    width: 100%;
+}
+
+.cajaTexto-contacto label,
+.cajaTexto-contacto input,
+.cajaTexto-contacto select {
+    text-align: left;
+    width: 2rem;
+    width: 96%;
+    padding: 0;
+}
+
+.cajaTexto-contacto select {
+    height: 2.8rem;
+    width: 97.5%;
+    padding-left: 5px;
+}
+
+.cajaTexto-contacto input,
+.cajaTexto-contacto textarea {
+    padding-left: 10px;
+}
+
+.cajaTexto-contacto label,
+.cajaTexto-contacto input {
+    width: 95%;
+}
+
+.cajaTexto-contacto input,
+.cajaTexto-contacto select {
+    background: transparent;
+    border: #fff solid 0.1rem;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    color: #fff;
+
+    
+}
+
+#privacidadContactoLabel a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    accent-color: #FFDC84;
+}
+  
+.cajaTexto-contacto option {
+    background: #141414;
+    border-radius: 0.5rem;
+    padding-block: 4rem;
+    color: #fff;
+}
+
+.cajaTexto2-contacto textarea {
+    background: transparent;
+    border: #fff solid 0.1rem;
+    border-radius: 0.5rem;
+    width: 95%;
+    color: #fff;
+    padding: 8px 0 0 10px;
+}
+
+.cajaTexto-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.cajaTexto2-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#button-contacto {
+    width: 100%;
+    padding: 15px;
+    border: unset;
+    border-radius: 0.5rem;
+    color: #212121;
+    z-index: 1;
+    background: #FFDC84;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Montserrat';
+    font-size: large;
+    font-weight: 500;
+    transition: all 250ms;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#button-contacto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ffe9b1;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+#button-contacto:hover {
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.205);
+}
+
+#button-contacto:hover::before {
+    width: 100%;
+}
+
+.foto1-contacto {
+    max-width: 50%;
+    width: 25rem;
+    z-index: 1;
+    transform: translate(40%, 0%);
+    display: none;
+}
+
+.foto2-contacto {
+    width: 20rem;
+    transform: translate(-10%, 30%);
+    z-index: 2;
+    display: none;
+}
+
+/* PORTADA CONTACTO */
+
+/* SECCION BAJA CONTACTO */
+
+/* Triangulos*/
+
+.triangle-contacto {
+    width: 100%;
+    height: 30rem;
+    background-color: #FFDC84;
+    clip-path: polygon(0% 0%, 0% 100%, 102% 100%, 60% 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloqueTextos-contacto {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+.triangle-contacto h2 {
+    margin: 0;
+    width: 60%;
+    font-size: 1.5rem;
+}
+
+.triangle-contacto p {
+    width: 60%;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.bloqueTextos-contacto span {
+    font-weight: 600;
+}
+
+.bloqueTextos-contacto a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #000;
+}
+
+/* SECCION BAJA CONTACTO */
+
+/* CONTACTO / CONTACTO / CONTACTO */
+
+/* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+.unique-project {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.unique-project section {
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.unique-project section:nth-of-type(1) {
+    margin-top: 0;
+}
+
+.unique-project h2 {
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+}
+
+.unique-project section:nth-of-type(1) {
+    margin-top: 30vh;
+}
+
+.obj1 {
+    position: absolute;
+}
+
+/*elemento 1 fithabit*/
+#portada-proyectos-individuales section:first-of-type img:nth-of-type(1) {
+    width: 8rem;
+}
+
+/*elemento 2 fithabit*/
+
+#portada-proyectos-individuales section:first-of-type img:nth-of-type(2) {
+    width: 10rem;
+}
+
+/*imagenes de gimnasio*/
+#portada-proyectos-individuales section:nth-of-type(2) img {
+    width: 13rem;
+}
+
+/*imagenes de identidad*/
+#portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1) {
+    width: 10rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(2) {
+    width: 13rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1).logoVerticalProyectosIndividuales {
+    width: 6rem;
+}
+
+/*textos de identidad*/
+#portada-proyectos-individuales section:nth-of-type(3) h3 {
+    font-size: 2.5rem;
+}
+
+/*imagenes de objetivos*/
+#portada-proyectos-individuales section:nth-of-type(4) img {
+    width: 7rem;
+}
+
+/*imagenes de personalidad*/
+#portada-proyectos-individuales section:nth-of-type(5) img {
+    width: 8rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(5) img.imgHorizontal {
+    width: 13rem;
+}
+
+/*imagenes de paleta de colores*/
+#portada-proyectos-individuales section:nth-of-type(6) div {
+    height: 8rem;
+    width: 8rem;
+}
+
+/*imagenes tipografia*/
+#portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(1) {
+    width: 9rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(2) {
+    width: 13rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) img {
+    height: 8rem;
+    width: 8rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) h3 {
+    font-size: 2em;
+    margin-top: -3rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) p {
+    font-size: 1.9em;
+    margin-left: 0.5rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) h3 {
+    font-size: 2.5em;
+    margin-top: -3rem;
+}
+
+#portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) p {
+    font-size: 2em;
+    margin-left: -0.5rem;
+}
+
+.proyectos-individuales {
+    border: 1px solid #fff;
+    padding-inline: 1rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: 0.3rem;
+}
+
+.proyectos-individuales:first-of-type svg {
+    transform: rotate(-90deg);
+}
+
+.proyectos-individuales:last-of-type svg {
+    transform: rotate(90deg);
+}
+
+.proyectos-individuales h3 {
+    font-size: inherit;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+/* AVISO LEGAL / AVISO LEGAL / AVISO LEGAL */
+
+.doc-legal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.doc-legal div {
+    width: 50vw;
+    padding: 8rem 0 4rem 0;
+}
+
+.doc-legal h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.doc-legal h2 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+}
+
+.doc-legal p, .doc-legal ul {
+    margin: 0 0 30px 0;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.doc-legal a {
+    color: #FFDC84;
+}
+
+/* AVISO LEGAL / AVISO LEGAL / AVISO LEGAL */
+
+/* FLECHA PARA ARRIBA */
+
+.flecha {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #141414;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(255, 220, 132, 0.35);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.flecha:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+/* FLECHA PARA ARRIBA */
+
+/* FOOTER NEGRO */
+
+footer {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: 50%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#politicas {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+#derechos {
+    color: #fff;
+    text-shadow: 0rem 0.2rem 0.2rem #0004;
+    font-size: 149%;
+    font-weight: 500;
+}
+
+#derechos span {
+    color: #FFDC84;
+}
+
+/* FOOTER NEGRO */
+
+/* FOOTER AMARILLO */
+
+#footerAmarillo {
+    background-color: #FFDC84;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: 50%;
+}
+
+#footerAmarillo a {
+    text-decoration: none;
+    color: #000;
+}
+
+#footerAmarillo #politicas {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+#footerAmarillo #derechos {
+    color: #fff;
+    text-shadow: 0rem 0.2rem 0.2rem #0004;
+    font-size: 149%;
+    font-weight: 500;
+}
+
+#footerAmarillo #derechos span {
+    color: #000;
+}
+
+/* FOOTER AMARILLO */
+
+@media only screen and (min-width:375px) {
+
+    .unique-project h2 {
+        font-size: 2.3em;
+    }
+
+    .vertical-text2-proyectos {
+        margin-left: 3%;
+    }
+
+    .vertical-text-proyectos {
+        margin-right: 4%;
+    }
+
+    #content-proyectos p {
+        font-size: 0.8em;
+    }
+
+    #content-proyectos2 p {
+        font-size: 0.8em;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    #footerAmarillo {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media only screen and (min-width:425px) {
+
+    .unique-project h2 {
+        font-size: 2.7em;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    #footerAmarillo {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width:550px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        height: 16rem;
+    }
+
+    .circle2-servicios {
+        height: 16rem;
+    }
+
+    .container-servicios2 h2 {
+        width: 50vw;
+
+    }
+    .container-servicios h2 {
+        width: 60vw;
+
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+}
+
+@media only screen and (min-width:600px) {
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+
+    @keyframes movPelota1-agencia {
+
+        0%,
+        100% {
+            transform: translateY(50%);
+        }
+
+        50% {
+            transform: translateY(40%);
+        }
+
+    }
+
+    @keyframes movPelota2-agencia {
+
+        0%,
+        100% {
+            transform: translateY(-200%);
+        }
+
+        50% {
+            transform: translateY(-190%);
+        }
+
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS PORTADA */
+    .content-portada-servicios, .content-portada-proyectos{
+        width: 80vw;
+    }
+    /* SERVICIOS PORTADA */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        height: 18rem;
+    }
+
+    .circle2-servicios {
+        height: 18rem;
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS INICIO */
+
+    #titulo-inicio {
+        margin-top: 10%;
+        height: 10rem;
+    }
+
+    .grid-parent-inicio {
+        margin-top: 0;
+    }
+
+    #p2-inicio {
+        top: -5rem;
+    }
+
+    #p1-inicio,
+    #p2-inicio {
+        font-size: 4rem;
+    }
+
+    /* SERVICIOS INICIO */
+
+    /* CTA INICIO */
+
+    #cta-inicio {
+        padding: 7rem 0;
+    }
+
+    .container-cta-inicio {
+        gap: 1.5rem;
+    }
+
+    .container-cta-inicio p {
+        font-size: 1.8rem;
+    }
+
+    .buttons-cta-inicio {
+        gap: 1.5rem;
+    }
+
+    .buttons-cta-inicio a {
+        width: 35%;
+        padding: 10px;
+        font-size: medium;
+    }
+
+    /* CTA INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .foto-lonja-agencia {
+        width: 16rem;
+        transform: translate(50%, 0%);
+    }
+
+    .foto-trabajando-agencia {
+        width: 18rem;
+        transform: translate(-10%, 40%);
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* METODOLOGIA AGENCIA */
+
+    #titulo-agencia {
+        margin-block: 15%;
+        margin-bottom: 0;
+        height: 10rem;
+    }
+
+    #p2-agencia {
+        top: -5rem;
+    }
+
+    #p1-agencia,
+    #p2-agencia {
+        font-size: 4rem;
+    }
+
+    /* METODOLOGIA AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .container-servicios2 h2 {
+        width: 40vw;
+
+    }
+    .container-servicios h2 {
+        width: 45vw;
+
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+
+    /* PROYECTOS PROYECTOS */
+
+    /* Pares */
+
+    .vertical-text-proyectos {
+        font-size: 4em;
+    }
+
+    /* Impares */
+
+    .vertical-text2-proyectos {
+        font-size: 4em;
+    }
+
+    .triangle2-proyectos {
+        margin-bottom: -1px;
+    }
+
+    /* PROYECTOS PROYECTOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+}
+
+@media only screen and (min-width: 750px) {
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        height: 24rem;
+    }
+
+    .circle2-servicios {
+        height: 21rem;
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+}
+
+@media only screen and (min-width:768px) {
+
+    .content-portada-inicio {
+        width: 90%;
+    }
+
+    .content-portada-inicio h1 {
+        font-size: 2.5em;
+        line-height: 2.5rem;
+    }
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    .triangle-contacto h2 {
+        font-size: 1.2rem;
+    }
+
+    .triangle-contacto p {
+        font-size: 0.8rem;
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    /* .proyectos-individuales h2 {
+        font-size: 4em;
+    } */
+
+    /* TABLET */
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(1) {
+        width: 10rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(2) img {
+        width: 15rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1) {
+        width: 11rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(2) {
+        width: 14rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1).logoVerticalProyectosIndividuales {
+        width: 7rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) h3 {
+        font-size: 3rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(4) img {
+        width: 9rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(5) img {
+        width: 9.5rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(5) img.imgHorizontal {
+        width: 17rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(6) div {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(1) {
+        width: 11rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(2) {
+        width: 15rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) h3 {
+        font-size: 2.5em;
+        margin-top: -4rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) p {
+        font-size: 2.4em;
+        margin-left: 0.6rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2) {
+        width: 12rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2).fotoMv2 {
+        width: 15rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type h2 {
+        font-size: 4em;
+    }
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    .carousel-track-agencia {
+        padding-block: 10rem;
+    }
+
+    footer {
+        font-size: 80%;
+    }
+
+    #footerAmarillo {
+        font-size: 80%;
+    }
+
+}
+
+@media only screen and (min-width:800px) {
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    .triangle-contacto p {
+        font-size: 0.9rem;
+    }
+
+    .triangle-contacto h2 {
+        font-size: 1.5rem;
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    /* HEADER */
+
+    .burger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 5rem;
+    }
+
+    .header-box {
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+    }
+
+    header section {
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    #burgerLogo {
+        padding-inline: 0;
+    }
+
+    .menu li:last-of-type {
+        padding: 0;
+    }
+
+    /* HEADER */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS INICIO */
+
+    #titulo-inicio {
+        margin-top: 8%;
+        height: 8rem;
+    }
+
+    #p2-inicio {
+        top: -8rem;
+    }
+
+    #p1-inicio,
+    #p2-inicio {
+        font-size: 6rem;
+    }
+
+    .grid-parent-inicio {
+        grid-template-rows: repeat(8, 1fr);
+        margin-block: 10%;
+    }
+
+    .grid-child-inicio:nth-of-type(1) {
+        grid-column: span 4 / span 4;
+        grid-row: span 4 / span 4;
+    }
+
+    .grid-child-inicio:nth-of-type(2) {
+        grid-column: span 4 / span 4;
+        grid-row: span 4 / span 4;
+        grid-column-start: 4;
+        grid-row-start: 5;
+    }
+
+    .grid-child-inicio:nth-of-type(3) {
+        grid-column: span 3 / span 3;
+        grid-row: span 4 / span 4;
+        grid-column-start: 5;
+        grid-row-start: 1;
+    }
+
+    .grid-child-inicio:nth-of-type(4) {
+        grid-column: span 3 / span 3;
+        grid-row: span 4 / span 4;
+        grid-column-start: 1;
+        grid-row-start: 5;
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    .pelotaNegra-inicio {
+        position: absolute;
+        background: radial-gradient(circle at 30% 35%, #202020, #000 80%);
+        border-radius: 50%;
+    }
+
+    .pelota1-inicio {
+        display: flex;
+        width: 4.5rem;
+        height: 4.5rem;
+        animation: movPelota1-inicio 3s ease-in-out infinite;
+        left: 5%;
+    }
+
+    .pelota2-inicio {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        animation: movPelota2-inicio 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 80%;
+        animation-delay: 0.5s;
+    }
+
+    .pelota3-inicio {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        animation: movPelota3-inicio 3s ease-in-out infinite;
+        transform: translateY(1550%);
+        animation-delay: 1s;
+        left: 75%;
+    }
+
+    @keyframes movPelota1-inicio {
+
+        0%,
+        100% {
+            transform: translateY(90%);
+        }
+
+        50% {
+            transform: translateY(80%);
+        }
+    }
+
+    @keyframes movPelota2-inicio {
+
+        0%,
+        100% {
+            transform: translateY(230%);
+        }
+
+        50% {
+            transform: translateY(220%);
+        }
+    }
+
+    @keyframes movPelota3-inicio {
+
+        0%,
+        100% {
+            transform: translateY(1550%);
+        }
+
+        50% {
+            transform: translateY(1540%);
+        }
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    /* SERVICIOS INICIO */
+
+    /* DESTACADOS INICIO */
+
+    .proyectoDestacado-inicio p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .proyectoDestacado-inicio h3 {
+        margin-block: 1.5rem;
+        font-size: 2rem;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .pelotaAmarilla-agencia {
+        position: absolute;
+        background: radial-gradient(circle at 30% 28%, #FFDC84, #807048 55%);
+        border-radius: 50%;
+    }
+
+    .pelota1-agencia {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        animation: movPelota1-agencia 3s ease-in-out infinite;
+        left: 10%;
+    }
+
+    .pelota2-agencia {
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        animation: movPelota2-agencia 3s ease-in-out infinite;
+        left: 80%;
+
+    }
+
+    @keyframes movPelota1-agencia {
+
+        0%,
+        100% {
+            transform: translateY(780%);
+        }
+
+        50% {
+            transform: translateY(770%);
+        }
+
+    }
+
+    @keyframes movPelota2-agencia {
+
+        0%,
+        100% {
+            transform: translateY(-150%);
+        }
+
+        50% {
+            transform: translateY(-140%);
+        }
+
+    }
+
+    .content-portada-agencia h1 {
+        width: 60%;
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* METODOLOGIA AGENCIA */
+
+    #titulo-agencia {
+        margin-block: 5%;
+        margin-bottom: 0;
+        height: 13rem;
+    }
+
+    #p2-agencia {
+        top: -8rem;
+    }
+
+    #p1-agencia,
+    #p2-agencia {
+        font-size: 6rem;
+    }
+
+    .textoArticulo1-agencia p,
+    .textoArticulo2-agencia p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .textoArticulo1-agencia h3,
+    .textoArticulo2-agencia h3 {
+        margin-block: 0.5rem;
+        font-size: 2.2rem;
+        font-family: 'Bernadette';
+    }
+
+    #seccionTextosMetodologia-agencia {
+        width: 80%;
+        gap: 1rem;
+    }
+
+    .articulo1-agencia {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .articulo1-agencia img,
+    .articulo2-agencia img {
+        width: 40%;
+    }
+
+    .articulo2-agencia {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .textoArticulo2-agencia {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* METODOLOGIA AGENCIA */
+
+    /* INTEGRANTES AGENCIA */
+
+    .cajaIntegrantes-agencia img {
+        width: 100%;
+        filter: grayscale(1);
+    }
+
+    #bloqueIntegrantes-agencia {
+        gap: 5rem;
+    }
+
+    .cajaIntegrantes-agencia h3 {
+        font-size: 3rem;
+    }
+
+    .card-agencia {
+        width: 315px;
+        height: 405px;
+    }
+
+    .container-card-agencia > p {
+        font-size: 3rem;
+    }
+
+    /* INTEGRANTES AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+
+
+    /* SERVICIOS SERVICIOS */
+
+
+
+
+    .container-servicios2 h2 {
+        width: 32vw;
+
+    }
+    .container-servicios h2 {
+        width: 38vw;
+
+    }
+    
+
+    .container-servicios,
+    .container-servicios2 {
+        width: 80vw;
+    }
+
+    .circle-servicios {
+        height: 22rem;
+        clip-path: circle(200% at 50% 435%);
+    }
+
+    .circle2-servicios {
+        height: 21rem;
+        clip-path: circle(200% at 50% 435%);
+    }
+
+    /* Pelotas */
+
+    /* Pelotas Negras */
+
+    .pelotaNegra-servicios {
+        position: absolute;
+        background: radial-gradient(circle at 30% 35%, #202020, #000 80%);
+        border-radius: 50%;
+    }
+
+    .pelota1-servicios {
+        display: flex;
+        width: 7.5rem;
+        height: 7.5rem;
+        animation: movPelota1-servicios 3s ease-in-out infinite;
+        left: 83%;
+    }
+
+    .pelota2-servicios {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        animation: movPelota2-servicios 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 65%;
+    }
+
+    .pelota3-servicios {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        animation: movPelota3-servicios 3s ease-in-out infinite;
+        left: 45%;
+    }
+
+    @keyframes movPelota1-servicios {
+
+        0%,
+        100% {
+            transform: translateY(-180%);
+        }
+
+        50% {
+            transform: translateY(-190%);
+        }
+
+    }
+
+    @keyframes movPelota2-servicios {
+
+        0%,
+        100% {
+            transform: translateY(-340%);
+        }
+
+        50% {
+            transform: translateY(-350%);
+        }
+
+    }
+
+    @keyframes movPelota3-servicios {
+
+        0%,
+        100% {
+            transform: translate(40%, -260%);
+        }
+
+        50% {
+            transform: translate(40%, -250%);
+        }
+
+    }
+
+    /*Pelotas Amarillas*/
+
+    .pelotaAmarilla-servicios {
+        position: absolute;
+        background: radial-gradient(circle at 30% 28%, #FFDC84, #807048 55%);
+        border-radius: 50%;
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* PORTADA PROYECTOS */
+
+    .content-portada-proyectos h1 {
+        font-size: 3em;
+        font-weight: 300;
+        text-align: left;
+        line-height: 4rem;
+        width: 100%;
+    }
+
+
+    /* PORTADA PROYECTOS */
+
+    /* PROYECTOS PROYECTOS */
+
+    /* Impares */
+
+    #content-proyectos a {
+        width: 70%;
+    }
+
+    #content-proyectos p {
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .vertical-text-proyectos {
+        font-size: 6em;
+    }
+
+    .triangle1-proyectos {
+        height: 8rem;
+        clip-path: polygon(0% 0%, 100% -15%, 100% 100%);
+    }
+
+    /* Pares */
+
+    #content-proyectos2 a {
+        width: 70%;
+    }
+
+    #content-proyectos2 p {
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .vertical-text2-proyectos {
+        font-size: 9em;
+    }
+
+    .triangle2-proyectos {
+        width: 100%;
+        height: 8rem;
+        background-color: #141414;
+        clip-path: polygon(0% 100%, 100% 0%, 100% 101%);
+    }
+
+    /* Pelotas */
+
+    /* Pelotas Negras */
+
+    .pelotaNegra-proyectos {
+        position: absolute;
+        background: radial-gradient(circle at 30% 35%, #202020, #000 80%);
+        border-radius: 50%;
+    }
+
+    .pelota1-proyectos {
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        animation: movPelota1-proyectos 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 5%;
+    }
+
+    .pelota2-proyectos {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        animation: movPelota2-proyectos 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 40%;
+    }
+
+    @keyframes movPelota1-proyectos {
+
+        0%,
+        100% {
+            transform: translateY(-90%);
+        }
+
+        50% {
+            transform: translateY(-80%);
+        }
+
+    }
+
+    @keyframes movPelota2-proyectos {
+
+        0%,
+        100% {
+            transform: translateY(-70%);
+        }
+
+        50% {
+            transform: translateY(-60%);
+        }
+
+    }
+
+    /* Pelotas Amarillas */
+
+    .pelotaAmarilla-proyectos {
+        position: absolute;
+        background: radial-gradient(circle at 30% 28%, #FFDC84, #807048 55%);
+        border-radius: 50%;
+    }
+
+    .pelota4-proyectos {
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        animation: movPelota4-proyectos 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 89%;
+    }
+
+    .pelota5-proyectos {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        animation: movPelota5-proyectos 3s ease-in-out infinite;
+        transform: translateY(230%);
+        left: 55%;
+    }
+
+    @keyframes movPelota4-proyectos {
+
+        0%,
+        100% {
+            transform: translateY(-70%);
+        }
+
+        50% {
+            transform: translateY(-60%);
+        }
+
+    }
+
+    @keyframes movPelota5-proyectos {
+
+        0%,
+        100% {
+            transform: translateY(-50%);
+        }
+
+        50% {
+            transform: translateY(-40%);
+        }
+
+    }
+
+    /* PROYECTOS PROYECTOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .content-portada-contacto {
+        flex-direction: row;
+    }
+
+    #seccionPortadaDecorado-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .portada-contacto {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-portada-contacto {
+        justify-content: center;
+        width: 90%;
+    }
+
+    #seccionPortadaDecorado-contacto h1 {
+        margin: 0;
+        line-height: 4rem;
+        text-align: left;
+    }
+
+    #seccionPortadaDecorado-contacto span {
+        color: #FFDC84;
+        font-weight: 100;
+    }
+
+    #seccionPortadaDecorado-contacto p {
+        font-size: 1rem;
+        font-weight: 100;
+        margin: 0rem;
+        margin-bottom: 5rem;
+    }
+
+    .foto1-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(75%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(-65%, 30%);
+        z-index: 1;
+    }
+
+    /* Formulario */
+
+    #formulario-contacto {
+        background-color: #141414;
+        box-shadow: 0rem 0rem 1.5rem #0008;
+        border-radius: 1rem;
+        gap: 1.5rem;
+        padding: 2rem;
+        width: 100%;
+        height: 115%;
+        font-weight: 100;
+    }
+
+    .cajaTexto-contacto label,
+    .cajaTexto-contacto input {
+        width: 95.5%;
+    }
+
+    .cajaTexto2-contacto textarea {
+        width: 98%;
+    }
+
+    .cajaTexto-contacto select {
+        width: 100%;
+    }
+
+    .bloqueForm1-contacto {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    .triangle-contacto p {
+        font-size: 1.1rem;
+    }
+
+    .triangle-contacto h2 {
+        font-size: 1.8rem;
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* FOOTER NEGRO */
+
+    footer {
+        font-size: 100%;
+    }
+
+    #politicas {
+        gap: 1rem;
+    }
+
+    #derechos {
+        font-size: 159%;
+    }
+
+    /* FOOTER NEGRO */
+
+    /* FOOTER AMARILLO */
+
+    #footerAmarillo {
+        font-size: 100%;
+    }
+
+    #footerAmarillo #politicas {
+        gap: 1rem;
+    }
+
+    #footerAmarillo #derechos {
+        font-size: 159%;
+    }
+
+    /* FOOTER AMARILLO */
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .foto-lonja-agencia {
+        transform: translate(50%, 10%);
+    }
+
+    .foto-trabajando-agencia {
+        transform: translate(-10%, 50%);
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* CARRUSEL AGENCIA */
+
+    .carousel-slide-agencia img {
+        width: 60%;
+    }
+
+    .carousel-slide-agencia {
+        margin: 0 -17%;
+    }
+
+    @keyframes scroll-agencia {
+
+        0% {
+            transform: translateX(66%);
+        }
+
+        20% {
+            transform: translateX(66%);
+        }
+
+        25% {
+            transform: translateX(0%);
+        }
+
+        45% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(-66%);
+        }
+
+        70% {
+            transform: translateX(-66%);
+        }
+
+        75% {
+            transform: translateX(66%);
+        }
+
+        100% {
+            transform: translateX(66%);
+        }
+
+    }
+
+    /* CARRUSEL AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(200% at 50% 495%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(200% at 50% 490%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+
+
+    /* PROYECTOS PROYECTOS */
+
+    /* Pares */
+
+    .vertical-text-proyectos {
+        font-size: 6em;
+    }
+
+    #content-proyectos a {
+        width: 70%;
+    }
+
+    #content-proyectos p {
+        width: 70%;
+    }
+
+    /* Impares */
+
+    .vertical-text2-proyectos {
+        font-size: 6em;
+    }
+
+    #content-proyectos2 a {
+        width: 70%;
+    }
+
+    #content-proyectos2 p {
+        width: 70%;
+    }
+
+    /* PROYECTOS PROYECTOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .foto1-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(60%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(-70%, 30%);
+        z-index: 1;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    /* PC */
+    .unique-project h2 {
+        font-size: 5em;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(1) {
+        width: 15rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2) {
+        width: 15rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2).fotoMv2 {
+        width: 20rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type h2 {
+        font-size: 6em;
+    }
+
+    /*gimnasio*/
+    #portada-proyectos-individuales section:nth-of-type(2) img {
+        width: 18rem;
+    }
+
+    /*imagenes de identidad*/
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1) {
+        width: 13rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(2) {
+        width: 18rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1).logoVerticalProyectosIndividuales {
+        width: 8rem;
+    }
+
+    /*textos de identidad*/
+    #portada-proyectos-individuales section:nth-of-type(3) h3 {
+        font-size: 4rem;
+    }
+
+    /*imagenes de objetivos*/
+    #portada-proyectos-individuales section:nth-of-type(4) img {
+        width: 12rem;
+    }
+
+    /*imagenes de personalidad*/
+    #portada-proyectos-individuales section:nth-of-type(5) img {
+        width: 11rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(5) img.imgHorizontal {
+        width: 22rem;
+    }
+
+    /*imagenes de paleta de colores*/
+    #portada-proyectos-individuales section:nth-of-type(6) div {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    /*imagenes tipografia*/
+    #portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(1) {
+        width: 12rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(7) img:nth-of-type(2) {
+        width: 16rem;
+    }
+
+    /*divs de tiempos*/
+    #portada-proyectos-individuales section:nth-of-type(8) div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    /*textos de tiempos*/
+    #portada-proyectos-individuales section:nth-of-type(8) h3 {
+        font-size: 3em;
+        margin-top: -5rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) h3 {
+        font-size: 3em;
+        margin-top: -4.6rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) h3 {
+        font-size: 3em;
+        margin-top: -4rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) p {
+        font-size: 2.9rem;
+        margin-left: 15px;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) p {
+        font-size: 2.3rem;
+        margin-left: -10px;
+    }
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PORTADA SERVICIOS */
+
+    .content-portada-servicios h1 {
+        font-size: 5em;
+    }
+
+
+
+    /* PORTADA SERVICIOS */
+
+    .container-servicios2 h2 {
+        width: 40vw;
+
+    }
+    .container-servicios h2 {
+        width: 45vw;
+
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* pares */
+
+    .serviciosInpar-servicios {
+        padding-bottom: 100px;
+    }
+
+    .container-servicios,
+    .container-servicios2 {
+        height: 60vh;
+
+    }
+
+
+    .container-servicios h2 {
+        font-size: 4em;
+    }
+
+    .container-servicios p {
+        font-size: 1.5em;
+    }
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 541%);
+    }
+
+    /* impares */
+
+    .serviciosPar-servicios {
+        padding-bottom: 100px;
+    }
+
+
+    .container-servicios2 h2 {
+        font-size: 4em;
+    }
+
+    .container-servicios2 p {
+        font-size: 1.5em;
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 541%);
+    }
+
+    /* Carrusel */
+
+    .carousel-images-servicios a {
+        width: 600px;
+    }
+
+    .carousel-images2-servicios a {
+        margin: 0;
+        padding-inline: 6rem;
+    }
+
+    .carousel-images2-servicios img {
+        width: 50%;
+    }
+
+    /* Pelotas */
+
+    /* Pelotas Negras */
+
+    .pelota2-servicios {
+
+        left: 55%;
+    }
+    .pelota3-servicios {
+
+        left: 40%;
+    }
+    @keyframes movPelota1-servicios {
+
+        0%,
+        100% {
+            transform: translateY(-260%);
+        }
+
+        50% {
+            transform: translateY(-250%);
+        }
+
+    }
+
+    @keyframes movPelota2-servicios {
+
+        0%,
+        100% {
+            transform: translateY(-420%);
+        }
+
+        50% {
+            transform: translateY(-410%);
+        }
+
+    }
+
+    @keyframes movPelota3-servicios {
+
+        0%,
+        100% {
+            transform: translate(400%, -390%);
+        }
+
+        50% {
+            transform: translate(400%, -400%);
+        }
+
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .foto1-contacto {
+        display: flex;
+        width: 14rem;
+        transform: translate(65%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(-80%, 30%);
+        z-index: 1;
+    }
+
+    #seccionPortadaDecorado-contacto h1 {
+        font-size: 4.2rem;
+    }
+
+    #seccionPortadaDecorado-contacto p {
+        font-size: 1.12rem;
+        margin-bottom: 2rem;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    .triangle-contacto p {
+        font-size: 1.3rem;
+    }
+
+    .triangle-contacto h2 {
+        font-size: 2.2rem;
+    }
+
+    .triangle-contacto {
+        height: 40rem;
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    h2 {
+        font-size: 5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    /* HEADER */
+
+    header {
+        font-size: 1em;
+    }
+
+    /* HEADER */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* PORTADA INICIO */
+
+    .portada-inicio {
+        text-align: left;
+    }
+
+    .content-portada-inicio {
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .h2fake-inicio {
+        font-size: 1.2rem;
+        width: 90%;
+        gap: 0.5rem;
+    }
+
+    .content-portada-inicio h1 {
+        font-size: 4em;
+        margin-bottom: 0;
+        width: 100%;
+        line-height: 4.3rem;
+    }
+
+    .cajasTextosPortada-inicio {
+        width: 90%;
+    }
+
+    .content-portada-inicio video {
+        display: flex;
+        width: 40%;
+        transform: translateX(20%);
+    }
+
+    /* PORTADA INICIO */
+
+    /* SERVICIOS INICIO */
+
+    .grid-parent-inicio {
+        width: 75rem;
+        margin-top: 8%;
+    }
+
+    .triangle-inicio {
+        height: 7.5rem;
+    }
+
+    /* SERVICIOS INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacado-inicio {
+        position: relative;
+        overflow: hidden;
+    }
+
+    #destacadosTitulo-inicio {
+        position: absolute;
+        transform: rotate(-90deg) translateY(-730%);
+        transform-origin: bottom right;
+        margin: 0;
+        font-size: 4.2rem;
+    }
+
+    .proyectoDestacado-inicio {
+        margin-left: 22%;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* CTA INICIO */
+
+    #cta-inicio {
+        padding: 6rem 0;
+    }
+
+    .container-cta-inicio {
+        gap: 2rem;
+        max-width: 70%;
+    }
+
+    .container-cta-inicio p {
+        font-size: 2.2rem;
+    }
+
+    .buttons-cta-inicio {
+        gap: 3rem;
+    }
+
+    .buttons-cta-inicio a {
+        width: 20%;
+        padding: 15px;
+        border-radius: 0.5rem;
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    /* CTA INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+    .portada-agencia {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-portada-agencia {
+        flex-direction: row;
+        width: 80vw;
+    }
+    .content-portada-servicios{
+        width: 80vw;
+    }
+
+    .foto-lonja-agencia {
+        width: 15rem;
+        transform: translate(40%, 0%);
+    }
+
+    .foto-trabajando-agencia {
+        width: 20rem;
+        transform: translate(-20%, 30%);
+        z-index: 2;
+    }
+
+    .content-portada-agencia h1 {
+        font-size: 2.5em;
+        margin-bottom: 0;
+        width: 100%;
+        line-height: 3rem;
+
+    }
+
+    .pelota2-agencia {
+        width: 6rem;
+        height: 6rem;
+
+        left: 45%;
+    }
+
+    @keyframes movPelota1-agencia {
+
+        0%,
+        100% {
+            transform: translateY(-260%);
+        }
+
+        50% {
+            transform: translateY(-250%);
+        }
+
+    }
+
+    @keyframes movPelota2-agencia {
+
+        0%,
+        100% {
+            transform: translateY(160%);
+        }
+
+        50% {
+            transform: translateY(150%);
+        }
+
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* CARRUSEL AGENCIA */
+
+    .carousel-slide-agencia img {
+        width: 50%;
+        display: block;
+    }
+
+    .carousel-slide-agencia {
+        margin: 0 -23%;
+    }
+
+    @keyframes scroll-agencia {
+
+        0% {
+            transform: translateX(54%);
+        }
+
+        20% {
+            transform: translateX(54%);
+        }
+
+        25% {
+            transform: translateX(0%);
+        }
+
+        45% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(-54%);
+        }
+
+        70% {
+            transform: translateX(-54%);
+        }
+
+        75% {
+            transform: translateX(54%);
+        }
+
+        100% {
+            transform: translateX(54%);
+        }
+
+    }
+
+    /* CARRUSEL AGENCIA */
+
+    /* INTEGRANTES AGENCIA */
+
+    .cajaIntegrantes-agencia img {
+        width: 80%;
+        filter: grayscale(1);
+    }
+
+    #bloqueIntegrantes-agencia {
+        gap: 5rem;
+    }
+
+    .cajaIntegrantes-agencia h3 {
+        font-size: 3rem;
+    }
+
+    .triangle1-agencia {
+        height: 4rem;
+    }
+
+    .triangle2-agencia {
+        height: 3rem;
+    }
+
+    /* INTEGRANTES AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .foto1-contacto {
+        display: flex;
+        width: 14rem;
+        transform: translate(65%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(-80%, 30%);
+        z-index: 1;
+    }
+
+    #seccionPortadaDecorado-contacto h1 {
+        font-size: 4.8rem;
+        line-height: 5rem;
+    }
+
+    #seccionPortadaDecorado-contacto p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    #formulario-contacto {
+        width: 60rem;
+    }
+
+    .portada-contacto {
+        height: 32rem;
+    }
+
+    .content-portada-contacto h1 {
+        font-size: 6em;
+        max-width: 50%;
+    }
+
+    .content-portada-contacto h1 {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    #button-contacto {
+        padding: 25px;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    /* Pelotas */
+
+    .pelotaAmarilla-contacto {
+        position: absolute;
+        background: radial-gradient(circle at 30% 28%, #FFDC84, #807048 55%);
+        border-radius: 50%;
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 1250px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 595%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 625%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+    h2 {
+        font-size: 5.8rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    /* INICIO / INICIO / INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        margin-bottom: initial;
+        font-size: 4.2rem;
+        position: absolute;
+        transform: rotate(-90deg) translateY(-770%);
+        margin: 0;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .content-portada-agencia h1 {
+        font-size: 3em;
+        line-height: 3.2rem;
+
+    }
+
+    .articulo1-agencia img,
+    .articulo2-agencia img {
+        width: 20%;
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .foto1-contacto {
+        display: flex;
+        width: 16rem;
+        transform: translate(70%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 22rem;
+        transform: translate(-73%, 30%);
+        z-index: 1;
+    }
+
+    #seccionPortadaDecorado-contacto h1 {
+        font-size: 4.8rem;
+    }
+
+    #seccionPortadaDecorado-contacto p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    /* Formulario */
+
+    #formulario-contacto {
+        width: 60rem;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    /*elemento 1 fithabit*/
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(1) {
+        width: 17rem;
+    }
+
+    /*elemento 2 fithabit*/
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2) {
+        width: 20rem;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2).fotoMv2 {
+        width: 25rem;
+    }
+
+    /*imagenes de gimnasio*/
+    #portada-proyectos-individuales section:nth-of-type(2) img {
+        width: 23rem;
+    }
+
+    /*imagenes de identidad*/
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(1) {
+        width: 14rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(3) img:nth-of-type(2) {
+        width: 22rem;
+    }
+
+    /*textos de identidad*/
+    #portada-proyectos-individuales section:nth-of-type(3) h3 {
+        font-size: 3.5rem;
+    }
+
+    /*imagenes de objetivos*/
+    #portada-proyectos-individuales section:nth-of-type(4) img {
+        width: 14rem;
+    }
+
+    /*imagenes de tiempos*/
+    #portada-proyectos-individuales section:nth-of-type(8) img {
+        height: 13rem;
+        width: 13rem;
+    }
+
+    /*textos de tiempos*/
+    #portada-proyectos-individuales section:nth-of-type(8) h3 {
+        font-size: 4em;
+        margin-top: -6.5rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) h3 {
+        font-size: 4em;
+        margin-top: -6.5rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) h3 {
+        font-size: 4em;
+        margin-top: -5.5rem;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(1) p {
+        font-size: 3.8rem;
+        margin-left: 15px;
+    }
+
+    #portada-proyectos-individuales section:nth-of-type(8) div:nth-of-type(2) p {
+        font-size: 3.2rem;
+        margin-left: -13px;
+    }
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS INICIO */
+
+    #titulo-inicio {
+        margin-top: 5%;
+        height: 8rem;
+    }
+
+    .grid-parent-inicio {
+        width: 75rem;
+        margin-top: 5%;
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    .pelota1-inicio {
+        width: 8rem;
+        height: 8rem;
+        transform: translateY(230%);
+        left: 10%;
+    }
+
+    .pelota2-inicio {
+        width: 6rem;
+        height: 6rem;
+        transform: translateY(150%);
+    }
+
+    .pelota3-inicio {
+        width: 7rem;
+        height: 7rem;
+        transform: translateY(980%);
+    }
+
+    @keyframes movPelota2-inicio {
+
+        0%,
+        100% {
+            transform: translateY(150%);
+        }
+
+        50% {
+            transform: translateY(160%);
+        }
+    }
+
+    @keyframes movPelota3-inicio {
+
+        0%,
+        100% {
+            transform: translateY(980%);
+        }
+
+        50% {
+            transform: translateY(970%);
+        }
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    /* SERVICIOS INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        font-size: 4.4rem;
+        transform: rotate(-90deg) translateY(-780%);
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .content-portada-agencia h1 {
+        font-size: 3.2rem;
+
+    }
+
+    .foto-lonja-agencia {
+        width: 15rem;
+        transform: translate(50%, 0%);
+    }
+
+    .foto-trabajando-agencia {
+        width: 20rem;
+        transform: translate(-10%, 30%);
+        z-index: 2;
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* INTEGRANTES AGENCIA */
+
+    .cajaIntegrantes-agencia img {
+        width: 70%;
+        filter: grayscale(1);
+    }
+
+    /* INTEGRANTES AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 650%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 680%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* PORTADA PROYECTOS */
+
+    .content-portada-proyectos h1 {  
+        font-size: 4em;
+        font-weight: 300;
+        text-align: left;
+        line-height: 5rem;
+    }
+
+
+    /* PORTADA PROYECTOS */
+
+    /* PROYECTOS PROYECTOS */
+
+    /* Pares */
+
+    .vertical-text-proyectos {
+        font-size: 7em;
+    }
+
+    .triangle1-proyectos {
+        clip-path: polygon(0% 0%, 100% -4%, 120% 100%);
+    }
+
+    #content-proyectos p {
+        font-size: 1.4em;
+    }
+
+    /* Impares */
+
+    .vertical-text2-proyectos {
+        font-size: 7em;
+    }
+
+    .triangle2-proyectos {
+        clip-path: polygon(0% 100%, 120% 0%, 100% 116%);
+    }
+
+    #content-proyectos2 p {
+        font-size: 1.4em;
+    }
+
+    /* PROYECTOS PROYECTOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .foto1-contacto {
+        display: flex;
+        width: 18rem;
+        transform: translate(70%, 0%);
+        z-index: 2;
+    }
+
+    .foto2-contacto {
+        display: flex;
+        width: 22rem;
+        transform: translate(-83%, 30%);
+        z-index: 1;
+    }
+
+    #seccionPortadaDecorado-contacto h1 {
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+
+    #seccionPortadaDecorado-contacto p {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    /* Formulario */
+
+    #formulario-contacto {
+        width: 50rem;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    /*Pelotas*/
+
+    .pelota1-contacto {
+        display: flex;
+        width: 7rem;
+        height: 7rem;
+        animation: movPelota1-contacto 3s ease-in-out infinite;
+        left: 91%;
+    }
+
+    .pelota2-contacto {
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        transform: translateY(-100%);
+        animation: movPelota2-contacto 3s ease-in-out infinite;
+        left: 35%;
+        animation-delay: 0.5s;
+    }
+
+    .pelota3-contacto {
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        animation: movPelota3-contacto 3s ease-in-out infinite;
+        left: 78%;
+    }
+
+    @keyframes movPelota3-contacto {
+
+        0%,
+        100% {
+            transform: translateY(-50%);
+        }
+
+        50% {
+            transform: translateY(-40%);
+        }
+
+    }
+    
+    @keyframes movPelota2-contacto {
+
+        0%,
+        100% {
+            transform: translateY(-100%);
+        }
+
+        50% {
+            transform: translateY(-90%);
+        }
+
+    }
+
+    @keyframes movPelota1-contacto {
+
+        0%,
+        100% {
+            transform: translateY(200%);
+        }
+
+        50% {
+            transform: translateY(190%);
+        }
+
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        transform: rotate(-90deg) translateY(-820%);
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INTEGRANTES AGENCIA */
+
+    .cajaIntegrantes-agencia img {
+        width: 60%;
+        filter: grayscale(1);
+    }
+
+    #bloqueIntegrantes-agencia {
+        gap: 0rem;
+    }
+
+    /* INTEGRANTES AGENCIA */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .container-servicios2 h2 {
+        width: 30vw;
+
+    }
+    .container-servicios h2 {
+        width: 35vw;
+
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    #seccionPortadaDecorado-contacto {
+        justify-content: center;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+}
+
+@media only screen and (min-width: 1550px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .container-servicios p,
+    .container-servicios2 p {
+        width: 68%;
+    }
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 710%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 740%);
+    }
+
+    .pelota3-servicios{
+        left: 50%;
+    }
+
+
+    @keyframes movPelota1-servicios {
+
+        0%,
+        100% {
+            transform: translate(100%, -140%);
+        }
+
+        50% {
+            transform: translate(100%, -130%);
+        }
+
+    }
+
+    @keyframes movPelota2-servicios {
+
+        0%,
+        100% {
+            transform: translate(350%, -570%);
+        }
+
+        50% {
+            transform: translate(350%, -560%);
+        }
+
+    }
+
+    @keyframes movPelota3-servicios {
+
+        0%,
+        100% {
+            transform: translate(30%, -400%);
+        }
+
+        50% {
+            transform: translateY(30%, -390%);
+        }
+
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS INICIO */
+
+    /* Pelotas Servicios Inicio */
+
+    .pelota3-inicio {
+        transform: translateY(990%);
+    }
+
+    @keyframes movPelota3-inicio {
+
+        0%,
+        100% {
+            transform: translateY(990%);
+        }
+
+        50% {
+            transform: translateY(1000%);
+        }
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    /* SERVICIOS INICIO */
+    
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* PORTADA PROYECTOS */
+
+    .content-portada-proyectos h1 {
+        width: 78%;
+    }
+
+    /* PORTADA PROYECTOS */
+
+    /* PROYECTOS PROYECTOS */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        transform: rotate(-90deg) translateY(-790%);
+        font-size: 5rem;
+    }
+
+    .proyectoDestacado-inicio h3 {
+        font-size: 2.7rem;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* CTA INICIO */
+
+    .container-cta-inicio p {
+        font-size: 2.4rem;
+    }
+
+    /* CTA INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .content-portada-agencia h1 {
+        width: 80%;
+    }
+
+    .foto-lonja-agencia {
+        width: 25rem;
+        transform: translate(40%, 0%);
+    }
+
+    .foto-trabajando-agencia {
+        width: 30rem;
+        transform: translate(-15%, 30%);
+        z-index: 2;
+    }
+
+    .pelota2-agencia {
+        width: 6rem;
+        height: 6rem;
+
+        left: 35%;
+    }
+
+    @keyframes movPelota1-agencia {
+
+        0%,
+        100% {
+            transform: translateY(-260%);
+        }
+
+        50% {
+            transform: translateY(-250%);
+        }
+
+    }
+
+    @keyframes movPelota2-agencia {
+
+        0%,
+        100% {
+            transform: translateY(190%);
+        }
+
+        50% {
+            transform: translateY(180%);
+        }
+
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PORTADA CONTACTO */
+
+    .bloqueTextos-contacto {
+        width: 80vw;
+    }
+
+    #seccionPortadaDecorado-contacto {
+        width: 40%;
+        height: 90%;
+        justify-content: flex-end;
+    }
+
+    .portada-contacto,
+    .content-portada-contacto {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Formulario */
+
+    #formulario-contacto {
+        width: 35rem;
+    }
+
+    /* PORTADA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2) {
+        margin-left: 10vw;
+    }
+
+    #portada-proyectos-individuales section:first-of-type img:nth-of-type(2).fotoMv2 {
+        margin-left: 0px;
+    }
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+}
+
+@media only screen and (min-width: 1700px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        transform: rotate(-90deg) translateY(-745%);
+        font-size: 5.2rem;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    .content-portada-agencia h1 {
+        width: 100%;
+        line-height: 4rem;
+        font-size: 4rem;
+    }
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 765%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 795%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* PROYECTOS / PROYECTOS / PROYECTOS */
+
+    /* PORTADA PROYECTOS */
+
+    .content-portada-proyectos h1 {
+        width: 78%;
+    }
+
+    /* PORTADA PROYECTOS */
+
+    /* PROYECTOS PROYECTOS */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* SECCION BAJA CONTACTO */
+
+    /* Triangulos */
+
+    .triangle-contacto h2 {
+        font-size: 2.5rem;
+    }
+
+    .triangle-contacto p {
+        font-size: 1.8rem;
+    }
+
+    .triangle-contacto {
+        height: 50rem;
+    }
+
+    /* Pelotas */
+
+    .pelota2-contacto {
+        width: 8rem;
+        height: 8rem;
+        transform: translateY(-70%);
+        left: 35%;
+    }
+
+    .pelota3-contacto {
+        left: 70%;
+    }
+
+    @keyframes movPelota2-contacto {
+
+        0%,
+        100% {
+            transform: translateY(-70%);
+        }
+
+        50% {
+            transform: translateY(-60%);
+        }
+
+    }
+
+    /* SECCION BAJA CONTACTO */
+
+    /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+    #portada-proyectos-individuales section:nth-of-type(2) img {
+        width: 25rem;
+    }
+
+    /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* SERVICIOS INICIO */
+
+    /* Pelotas Servicios Inicio */
+
+    .pelota3-inicio {
+        width: 7rem;
+        height: 7rem;
+        transform: translateY(1050%);
+    }
+
+    @keyframes movPelota3-inicio {
+
+        0%,
+        100% {
+            transform: translateY(1050%);
+        }
+
+        50% {
+            transform: translateY(1060%);
+        }
+    }
+
+    /* Pelotas Servicios Inicio */
+
+    /* SERVICIOS INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        transform: rotate(-90deg) translateY(-780%);
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+    /* PORTADA AGENCIA */
+
+    .content-portada-agencia h1 {
+        width: 80%;
+    }
+
+    /* PORTADA AGENCIA */
+
+    /* AGENCIA / AGENCIA / AGENCIA */
+
+}
+
+@media only screen and (min-width:1840px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 819%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 848%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 1900px) {
+
+    /* INICIO / INICIO / INICIO */
+
+    /* DESTACADOS INICIO */
+
+    #destacadosTitulo-inicio {
+        transform: rotate(-90deg) translateY(-790%);
+        font-size: 5.6rem;
+    }
+
+    /* DESTACADOS INICIO */
+
+    /* INICIO / INICIO / INICIO */
+
+}
+
+
+@media only screen and (min-width:2500px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 1075%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 1135%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}

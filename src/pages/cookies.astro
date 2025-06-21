@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout typeFooter="amarillo">
+    <slot slot="head">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta
+        name="description"
+        content="Las cookies son archivos que pueden descargarse en su dispositivo a través de sitios web."
+      />
+  
+      <!-- Open Graph Meta Tags -->
+      <meta
+        property="og:title"
+        content="Política de Cookies - Codigosa"
+      />
+      <meta
+        property="og:description"
+        content="Las cookies son archivos que pueden descargarse en su dispositivo a través de sitios web."
+      />
+      
+      <meta property="og:url" content="https://www.codigosa.es/cookies" />
+      <meta property="og:type" content="website" />
+  
+      <title>Aviso Legal | Codigosa</title>
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Política de Cookies - Codigosa" />
+      <meta name="twitter:description" content="Las cookies son archivos que pueden descargarse en su dispositivo a través de sitios web." />
+  
+      <!-- Datos estructurados para mejorar el SEO -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Codigosa",
+          "url": "https://www.codigosa.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34 649 307 578",
+            "contactType": "Customer Service",
+            "areaServed": "ES",
+            "availableLanguage": "Spanish"
+          },
+          "sameAs": [
+            "https://www.facebook.com/codigosa",
+            "https://www.twitter.com/codigosa"
+          ]
+        }
+      </script>
+    </slot>
+
+      <main slot="main">
+        
+        <section class="doc-legal">
+          <div>
+            <h1>Política de Cookies</h1>
+            <h2>¿Qué son las cookies?</h2>
+            <p>Las cookies son archivos que se almacenan en el dispositivo del usuario al acceder a un sitio web. Estas permiten recopilar información sobre hábitos de navegación y mejorar la experiencia del usuario.</p>
+            <h2>Tipos de cookies utilizadas</h2>
+            <p>En función de su gestión:</p>
+            <ul>
+              <li><strong>Cookies propias:</strong> Son gestionadas por <strong>Codigosa</strong> para mejorar el funcionamiento del sitio web.</li>
+              <li><strong>Cookies de terceros:</strong> Son gestionadas por proveedores externos y se utilizan para análisis, publicidad o funcionalidades adicionales.</li>
+            </ul>
+            <p>En función de su duración:</p>
+            <ul>
+              <li><strong>Cookies de sesión:</strong> Se eliminan al cerrar el navegador.</li>
+              <li><strong>Cookies persistentes:</strong> Permanecen almacenadas durante un periodo determinado.</li>
+            </ul>
+            <p>En función de su finalidad:</p>
+            <ul>
+              <li><strong>Cookies técnicas:</strong> Facilitan la navegación y el uso de servicios.</li>
+              <li><strong>Cookies de personalización:</strong> Permiten adaptar la experiencia del usuario (idioma, configuración, etc.).</li>
+              <li><strong>Cookies de análisis:</strong> Recopilan datos sobre el comportamiento de los usuarios.</li>
+              <li><strong>Cookies publicitarias:</strong> Gestionan espacios publicitarios y muestran contenido personalizado.</li>
+              <li><strong>Cookies de redes sociales:</strong> Facilitan la interacción con plataformas externas como Facebook, Twitter o YouTube.</li>
+            </ul>
+            <h2>Gestión y eliminación de cookies</h2>
+            <p>El usuario puede configurar su navegador para aceptar, bloquear o eliminar cookies. A continuación, se proporcionan enlaces a las instrucciones de los navegadores más utilizados:</p>
+            <ul>
+              <li><strong>Google Chrome:</strong> <a target="_blank" href="https://support.google.com/accounts/answer/61416?hl=es">Configuración de cookies</a></li>
+              <li><strong>Mozilla Firefox:</strong> <a target="_blank" href="https://support.mozilla.org/es/kb/impedir-que-los-sitios-web-guarden-sus-preferencia">Configuración de cookies</a></li>
+              <li><strong>Microsoft Edge:</strong> <a target="_blank" href="https://support.microsoft.com/es-es/windows/administrar-cookies-en-microsoft-edge-ver-permitir-bloquear-eliminar-y-usar-168dab11-0753-043d-7c16-ede5947fc64d">Configuración de cookies</a></li>
+              <li><strong>Safari:</strong> <a target="_blank" href="http://safari.helpmax.net/es/privacidad-y-seguridad/como-gestionar-las-cookies/">Configuración de cookies</a></li>
+              <li><strong>Opera:</strong> <a target="_blank" href="https://help.opera.com/en/latest/web-preferences/#cookies">Configuración de cookies</a></li>
+            </ul>
+            <p>También se pueden gestionar las cookies a través de herramientas como:</p>
+            <ul>
+              <li><a target="_blank" href="https://www.ghostery.com/">Ghostery</a></li>
+              <li><a target="_blank" href="https://www.youronlinechoices.com/es/">Your Online Choices</a></li>
+            </ul>
+            <h2>Cookies utilizadas en www.codigosa.com</h2>
+            <p>El sitio web utiliza cookies propias y de terceros con finalidades técnicas, de personalización, análisis y marketing. Algunas de las principales cookies utilizadas son:</p>
+            <p><strong>WordPress:</strong></p>
+            <ul>
+              <li><strong>Cookies de sesión:</strong> Estas cookies son esenciales para el funcionamiento del sitio y permiten, por ejemplo, que los usuarios registrados mantengan su sesión iniciada.</li>
+            </ul>
+            <p><strong>Google Fonts:</strong></p>
+            <ul>
+              <li><strong>Cookies de terceros:</strong> Al utilizar fuentes proporcionadas por Google Fonts, se establece una conexión con los servidores de Google, lo que puede implicar la transferencia de la dirección IP del usuario. Sin embargo, Google Fonts no utiliza cookies para servir sus fuentes.</li>
+            </ul>
+            <h2>Aceptación de la Política de Cookies</h2>
+            <p>Al acceder a <strong>www.codigosa.com</strong>, se considera que el usuario acepta el uso de cookies. No obstante, puede gestionarlas y modificarlas en cualquier momento desde la configuración de su navegador.</p>
+          </div>
+        </section>
+
+      </main>
+</Layout>

@@ -1,0 +1,17 @@
+---
+let { href, img, title, description } = Astro.props;
+---
+
+<div class="proyectoDestacado-inicio">
+    <div class="destacadoImagen-inicio">
+      <a href={href}>
+        <img src={img} alt={`Imagen del proyecto de ${title}`} />
+      </a>
+    </div>
+    <div>
+      <h3>{title}</h3>
+      <p>
+        {description}
+      </p>
+    </div>
+</div>

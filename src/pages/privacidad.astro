@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout typeFooter="amarillo">
+    <slot slot="head">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta
+        name="description"
+        content="Codigosa, en cumplimiento de la normativa vigente sobre protección de datos personales, informa que los datos recopilados."
+      />
+  
+      <!-- Open Graph Meta Tags -->
+      <meta
+        property="og:title"
+        content="Política de Privacidad - Codigosa"
+      />
+      <meta
+        property="og:description"
+        content="Codigosa, en cumplimiento de la normativa vigente sobre protección de datos personales, informa que los datos recopilados."
+      />
+      
+      <meta property="og:url" content="https://www.codigosa.es/privacidad" />
+      <meta property="og:type" content="website" />
+  
+      <title>Aviso Legal | Codigosa</title>
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Política de Privacidad - Codigosa" />
+      <meta name="twitter:description" content="Codigosa, en cumplimiento de la normativa vigente sobre protección de datos personales, informa que los datos recopilados." />
+  
+      <!-- Datos estructurados para mejorar el SEO -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Codigosa",
+          "url": "https://www.codigosa.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34 649 307 578",
+            "contactType": "Customer Service",
+            "areaServed": "ES",
+            "availableLanguage": "Spanish"
+          },
+          "sameAs": [
+            "https://www.facebook.com/codigosa",
+            "https://www.twitter.com/codigosa"
+          ]
+        }
+      </script>
+    </slot>
+
+      <main slot="main">
+        
+        <section class="doc-legal">
+          <div>
+            <h1>Política de Privacidad</h1>
+            <h2>Protección de datos personales conforme al RGPD</h2>
+            <p>En cumplimiento con la normativa vigente sobre protección de datos personales, <strong>Codigosa</strong> informa que los datos personales recopilados a través de los formularios en la web <strong>www.codigosa.com</strong> se incorporan a sistemas automatizados destinados exclusivamente a la gestión de usuarios y servicios ofrecidos en esta plataforma.</p>
+            <p>El tratamiento automatizado de esta información tiene como propósito mantener la relación comercial con los usuarios, así como la gestión de consultas, formación, asesoramiento y otras actividades propias de <strong>Codigosa</strong>.</p>
+            <p>Estos datos solo serán compartidos con entidades necesarias para cumplir con los fines previamente mencionados y no se cederán a terceros sin el consentimiento expreso del usuario, salvo obligación legal.</p>
+            <p><strong>Codigosa</strong> implementa todas las medidas técnicas y organizativas necesarias para garantizar la seguridad, confidencialidad e integridad de los datos personales, en conformidad con lo establecido en el <strong>Reglamento General de Protección de Datos (RGPD)</strong>.</p>
+            <p><strong>Derechos de los usuarios</strong></p>
+            <p>Los usuarios tienen derecho a acceder, rectificar, suprimir, oponerse, limitar el tratamiento y solicitar la portabilidad de sus datos personales en cualquier momento. Para ejercer estos derechos, pueden enviar una solicitud a través de:</p>
+            <ul>
+              <li><strong>Correo electrónico</strong>: codigosabusiness@gmail.com</li>
+            </ul>
+            <p>El usuario es responsable de la veracidad y actualización de los datos proporcionados. Cualquier modificación en la información deberá ser comunicada a <strong>Codigosa</strong> a través de los medios indicados.</p>
+            <h2>Finalidad del tratamiento de los datos personales</h2>
+            <p>Los datos personales recopilados en <strong>www.codigosa.com</strong> serán utilizados con los siguientes propósitos:</p>
+            <ul>
+              <li><strong>Gestión de servicios y relación contractual:</strong> Cuando el usuario contrate los bienes o servicios ofertados, sus datos se utilizarán para la administración, prestación y mejora del servicio.</li>
+              <li><strong>Atención de solicitudes:</strong> Responder a consultas enviadas a través de los formularios de contacto.</li>
+              <li><strong>Envío de información comercial:</strong> Enviar boletines informativos (newsletters), promociones y publicidad relacionada con los servicios de Codigosa y su sector de actividad.</li>
+            </ul>
+            <p>El usuario podrá oponerse al envío de comunicaciones comerciales en cualquier momento, enviando un correo electrónico a <strong>codigosabusiness@gmail.com</strong>.</p>
+            <p>Los datos solicitados en los formularios de la web son obligatorios. Sin ellos, no será posible gestionar la solicitud ni prestar los servicios requeridos.</p>
+            <h2>¿Por cuánto tiempo se conservan los datos personales?</h2>
+            <p>Los datos personales se conservarán mientras dure la relación comercial o hasta que el usuario solicite su eliminación. Además, serán almacenados durante el tiempo necesario para cumplir con las obligaciones legales derivadas de los servicios prestados.</p>
+            <h2>Base legal para el tratamiento de datos</h2>
+            <p>El tratamiento de los datos personales de los usuarios se fundamenta en las siguientes bases jurídicas:</p>
+            <ul>
+              <li></strong>Ejecución de un contrato:</strong> La gestión de los servicios solicitados por el usuario y sus condiciones específicas.</li>
+              <li><strong>Consentimiento del usuario:</strong> La aceptación expresa de la presente política de privacidad mediante acciones afirmativas, como la marcación de una casilla en los formularios habilitados en la web.</li>
+            </ul>
+            <p>Si los datos proporcionados son incorrectos, incompletos o no se facilitan, no será posible gestionar la solicitud ni ofrecer los servicios requeridos.</p>
+            <h2>Datos proporcionados por los usuarios</h2>
+            <p>En caso de que los usuarios almacenen o compartan archivos con información personal en los servidores de alojamiento utilizados por <strong>Codigosa</strong>, serán ellos los responsables de garantizar el cumplimiento del RGPD y otras normativas de protección de datos aplicables.</p>
+            <p>Para cualquier consulta adicional sobre el tratamiento de datos personales, los usuarios pueden ponerse en contacto con <strong>Codigosa</strong> a través de los canales indicados anteriormente.</p>
+          </div>
+        </section>
+
+      </main>
+</Layout>

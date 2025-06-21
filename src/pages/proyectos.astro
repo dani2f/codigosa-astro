@@ -1,0 +1,89 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import OutProjectSection from "../components/subComponents/OutProjectSection.astro" 
+import { getProjects } from "../lib/wp";
+
+const data = await getProjects();
+
+---
+
+<Layout typeFooter={`${data.length%2 == 0 ? "amarillo" : ""}`}>
+  <slot slot="head">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descubre Nuestros Proyectos Innovadores - Codigosa</title>
+
+    <meta
+      name="description"
+      content="Explora los proyectos de Codigosa en Bilbao. Desarrollo de sitios web personalizados, diseño de logos y soluciones digitales innovadoras."
+    />
+    <meta
+      name="keywords"
+      content="proyectos Codigosa, diseño web Bizkaia, soluciones digitales Bilbao, portfolio Codigosa, agencia digital"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Proyectos de Codigosa - Bilbao" />
+    <meta
+      property="og:description"
+      content="Descubre los proyectos realizados por Codigosa en Bilbao. Expertos en desarrollo web, diseño de logos y mantenimiento de sitios web."
+    />
+    <meta property="og:url" content="https://www.codigosa.es/proyectos" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Proyectos de Codigosa - Bilbao" />
+    <meta
+      name="twitter:description"
+      content="Explora los proyectos de Codigosa en Bilbao. Desarrollo de sitios web personalizados, diseño de logos y soluciones digitales innovadoras."
+    />
+
+    <!-- Datos estructurados para mejorar el SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Proyectos - Codigosa",
+        "url": "https://www.codigosa.com/proyectos",
+        "sameAs": [
+          "https://www.facebook.com/codigosa",
+          "https://www.twitter.com/codigosa"
+        ]
+      }
+    </script>
+  </slot>
+
+  <main slot="main">
+    <!-- PORTADA -->
+
+    <section class="portada-proyectos" id="portada-proyectos">
+      <div class="light-overlay"></div>
+      <div class="content-portada-proyectos">
+        <h1 class="h1-proyectos">
+          Descubre las <span class="bernadette amarillo">páginas web</span>
+          que hemos creado para ver como podemos
+          <span class="bernadette amarillo">elevar tu marca</span>
+          a otro nivel
+        </h1>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+
+    {
+      data.map((data, index) => (
+        <OutProjectSection
+          
+          id={index}
+          href={`/proyectosIndividuales/${data.slug}`}
+          img={data.acf.imagen_destacada["url"]}
+          title={data.acf.titulo_portada}
+          description={data.acf.descripcion_destacada}
+        />
+      ))
+    }
+  </main>
+
+</Layout>

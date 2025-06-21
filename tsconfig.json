@@ -1,0 +1,22 @@
+{
+  "extends": "astro/tsconfigs/strict",   // primero el extend
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "types": ["vite/client"]            // para que InlineEnv esté tipado
+    // (añade aquí cualquier otra opción que necesites)
+  },
+  "include": [
+    "src",                              // tu código fuente
+    ".astro/types.d.ts",                // tipos generados por Astro
+    "env.d.ts"                          // si usas este para refs
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",                             // carpeta de build
+    ".vercel"                           // si quieres ignorar artefactos de Vercel
+  ]
+}

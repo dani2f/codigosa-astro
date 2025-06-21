@@ -1,0 +1,126 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import BaseProject from "../../components/subComponents/BaseProject.astro";
+import {
+  getIndividualProject,
+  getStaticProjects,
+  getNextAndPreviousProjects,
+} from "../../lib/wp";
+
+export async function getStaticPaths() {
+  // Obtenemos el listado de proyectos
+  const projects = await getStaticProjects();
+
+  // Mapeamos cada proyecto a un path dinámico
+  const paths = projects.map((project) => ({
+    params: { proyecto: project.titulo_portada.toLowerCase() },
+  }));
+
+  // Retornamos directamente el array de rutas
+  return paths;
+}
+
+const { proyecto } = Astro.params;
+if (!proyecto) {
+  throw new Error("Falta el parámetro 'proyecto' en la URL");
+}
+const dataProject = await getIndividualProject(proyecto);
+const project = dataProject.acf;
+const [nextProject, previousProject] =
+  await getNextAndPreviousProjects(proyecto);
+---
+
+<Layout typeFooter="amarillo">
+  <slot slot="head">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content={project.meta_description} />
+    <meta
+      name="keywords"
+      content=`${project.titulo_tematica.toLowerCase()}, ${project.titulo_portada.toLowerCase()}, proyectos, Codigosa`
+    />
+
+  
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={project.meta_title} />
+    <meta property="og:description" content={project.meta_description} />
+
+    <meta
+      property="og:url"
+      content=`/proyectosIndividuales/${project.titulo_portada.toLowerCase()}`
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={project.meta_title} />
+    <meta name="twitter:description" content={project.meta_description} />
+
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="img/logos/logoPequenoBlanco.svg"
+      type="image/x-icon"
+    />
+
+    <title>{project.meta_title}</title>
+
+    <!-- Datos estructurados para mejorar el SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BilbaoSkp",
+        "url": "https://www.codigosa.com",
+        "sameAs": [
+          "https://www.facebook.com/codigosa",
+          "https://www.twitter.com/codigosa"
+        ]
+      }
+    </script>
+  </slot>
+
+  <main
+    slot="main"
+    class={`unique-project ${project.clases_adicionales.includes("movilRotate") ? "movilRotate" : ""} ${project.clases_adicionales.includes("nombreLargoTematica") ? "nombreLargoTematica" : ""}`}
+    id="portada-proyectos-individuales"
+  >
+    <BaseProject
+      id={project.id}
+      titulo_portada={project.titulo_portada}
+      imagen_1_portada={project.imagen_1_portada}
+      imagen_2_portada={project.imagen_2_portada}
+      titulo_tematica={project.titulo_tematica}
+      imagen_1_tematica={project.imagen_1_tematica}
+      imagen_2_tematica={project.imagen_2_tematica}
+      imagen_3_tematica={project.imagen_3_tematica}
+      imagen_4_tematica={project.imagen_4_tematica}
+      imagen_1_identidad={project.imagen_1_identidad}
+      imagen_2_identidad={project.imagen_2_identidad}
+      imagen_1_objetivos={project.imagen_1_objetivos}
+      imagen_2_objetivos={project.imagen_2_objetivos}
+      imagen_3_objetivos={project.imagen_3_objetivos}
+      imagen_4_objetivos={project.imagen_4_objetivos}
+      imagen_1_personalidad={project.imagen_1_personalidad}
+      imagen_2_personalidad={project.imagen_2_personalidad}
+      imagen_3_personalidad={project.imagen_3_personalidad}
+      imagen_4_personalidad={project.imagen_4_personalidad}
+      color_1_paleta_de_colores={project.color_1_paleta_de_colores}
+      color_2_paleta_de_colores={project.color_2_paleta_de_colores}
+      color_3_paleta_de_colores={project.color_3_paleta_de_colores}
+      color_4_paleta_de_colores={project.color_4_paleta_de_colores}
+      tipografia_1_tipografias={project.imagen_1_tipografias}
+      tipografia_2_tipografias={project.imagen_2_tipografias}
+      duracion_tiempos={project.duracion_tiempos}
+      ejecucion_tiempos={project.ejecucion_tiempos}
+      nextProject={nextProject}
+      previousProject={previousProject}
+      clases_adicionales={project.clases_adicionales}
+    />
+  </main>
+</Layout>

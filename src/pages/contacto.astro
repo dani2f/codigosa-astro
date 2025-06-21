@@ -1,0 +1,212 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <slot slot="head">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Contacta con Codigosa, tu agencia de diseño y desarrollo web en Bilbao. Soluciones personalizadas para digitalizar tu negocio."
+    />
+    <meta
+      name="keywords"
+      content="contacto desarrollo web Bilbao, agencia de diseño web, Codigosa Bilbao, desarrollo web en Bilbao, digitalización de negocios"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Contacta con Codigosa - Diseño y Desarrollo Web en Bilbao"
+    />
+    <meta
+      property="og:description"
+      content="Contacta con Codigosa, tu agencia de diseño y desarrollo web en Bilbao. Soluciones personalizadas para digitalizar tu negocio."
+    />
+
+    <meta property="og:url" content="https://www.codigosa.es/contacto" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contacta con Codigosa - Diseño y Desarrollo Web en Bilbao"
+    />
+    <meta
+      name="twitter:description"
+      content="Contacta con Codigosa, tu agencia de diseño y desarrollo web en Bilbao. Soluciones personalizadas para digitalizar tu negocio."
+    />
+
+    <title>Contacta con Nosotros | Codigosa</title>
+
+    <!-- Datos estructurados para mejorar el SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Codigosa",
+        "url": "https://www.codigosa.es",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34 649 307 578",
+          "contactType": "Customer Service",
+          "areaServed": "ES",
+          "availableLanguage": "Spanish"
+        },
+        "sameAs": [
+          "https://www.facebook.com/codigosa",
+          "https://www.twitter.com/codigosa"
+        ]
+      }
+    </script>
+  </slot>
+
+  <main slot="main">
+    <!-- PORTADA -->
+
+    <section class="portada-contacto" id="portada-contacto">
+      <div class="content-portada-contacto">
+        <section id="seccionPortadaDecorado-contacto">
+          <h1>
+            ¿Quieres <span class="bernadette amarillo">contactarnos?</span>
+          </h1>
+          <p>
+            Si quieres digitalizar tu <span class="bernadette amarillo"
+              >negocio</span
+            >, contáctanos
+          </p>
+          <div id="fotosPortada-contacto">
+            <img
+              src="/img/imagenesLonja/pizarra.webp"
+              alt="Fotografia trabajando en la pizarra"
+              class="foto1-contacto"
+            />
+            <img
+              src="/img/imagenesLonja/fotoTrabajando.webp"
+              alt="Forogarafia trabajando en la mesa reunidos"
+              class="foto2-contacto"
+            />
+          </div>
+        </section>
+
+        <!-- Formulario con el botón configurado como "button" para evitar el submit automático -->
+        <form id="formulario-contacto" action="#" novalidate>
+          <div class="bloqueForm1-contacto">
+            <div class="cajaTexto-contacto">
+              <label for="nombre">Nombre*</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre"
+                required
+              />
+            </div>
+            <div class="cajaTexto-contacto">
+              <label for="apellidos">Apellidos*</label>
+              <input
+                type="text"
+                id="apellidos"
+                name="apellidos"
+                placeholder="Escribe tus apellidos"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="bloqueForm1-contacto">
+            <div class="cajaTexto-contacto">
+              <label for="emailEmisor">Email*</label>
+              <input
+                type="email"
+                id="emailEmisor"
+                name="emailEmisor"
+                placeholder="correo@ejemplo.com"
+                required
+              />
+            </div>
+            <div class="cajaTexto-contacto">
+              <label for="telefono">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Tu número de teléfono"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="bloqueForm1-contacto">
+            <div class="cajaTexto-contacto">
+              <label for="ideaProyecto">Idea del Proyecto*</label>
+              <input
+                type="text"
+                id="ideaProyecto"
+                name="ideaProyecto"
+                placeholder="Escribe tu idea de proyecto"
+                required
+              />
+            </div>
+            <div class="cajaTexto-contacto">
+              <label for="presupuesto">Presupuesto aproximado*</label>
+              <select id="presupuesto" name="presupuesto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="+750">+750</option>
+                <option value="+1000">+1000</option>
+                <option value="+1500">+1500</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cajaTexto2-contacto">
+            <label for="mensajeCompleto">Mensaje*</label>
+            <textarea
+              id="mensajeCompleto"
+              name="mensajeCompleto"
+              cols="100%"
+              rows="10"
+              placeholder="Escríbenos tu consulta..."
+              required></textarea>
+          </div>
+
+          <!-- Checkbox implementado como los demás elementos -->
+          <div class="cajaCheckbox-contacto">
+            <label for="privacidadContacto" id="privacidadContactoLabel">
+              <input
+                type="checkbox"
+                id="privacidadContacto"
+                name="privacidad"
+                required
+              />
+              He leido y acepto la <a href="/privacidad">Política de privacidad</a>
+            </label>
+          </div>
+
+          <!-- Botón configurado como "button" para evitar el envío automático -->
+          <button type="button" id="button-contacto">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+
+    <section class="animar">
+      <div class="pelotaAmarilla-contacto pelota1-contacto"></div>
+      <div class="pelotaAmarilla-contacto pelota2-contacto"></div>
+      <div class="pelotaAmarilla-contacto pelota3-contacto"></div>
+      <div class="triangle-contacto">
+        <div class="bloqueTextos-contacto">
+          <h2>¿Dudas o sugerencias?</h2>
+          <p>
+            Escríbenos a través del formulario de contacto, también puedes llamarnos al <span>+34 649 307 578</span> o escribirnos por correo a <span><a href="mailto:codigosabusiness@gmail.com">codigosabusiness@gmail.com</a></span>
+            y te contestaremos enseguida.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

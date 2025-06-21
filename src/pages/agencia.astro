@@ -1,0 +1,246 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <slot slot="head">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Conoce a Codigosa, una empresa de desarrollo web en Bilbao. Descubre nuestra misión, visión, y valores que nos distinguen. Contáctanos para saber más."
+    />
+    <meta
+      name="keywords"
+      content="agencia desarrollo web, misión y visión, valores, desarrollo web Bilbao, Codigosa, posicionamiento web Bilbao"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Codigosa - Agencia de Desarrollo Web en Bilbao"
+    />
+    <meta
+      property="og:description"
+      content="Conoce a Codigosa, una empresa de desarrollo web en Bilbao. Descubre nuestra misión, visión, y valores que nos distinguen. Contáctanos para saber más."
+    />
+ 
+    <meta property="og:url" content="https://www.codigosa.es/agencia" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Codigosa - Agencia de Desarrollo Web en Bilbao"
+    />
+    <meta
+      name="twitter:description"
+      content="Conoce a Codigosa, una empresa de desarrollo web en Bilbao. Descubre nuestra misión, visión, y valores que nos distinguen. Contáctanos para saber más."
+    />
+
+
+    <title>Tu Agencia Creativa en Bilbao | Codigosa</title>
+
+    <!-- Datos estructurados para mejorar el SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Codigosa - Agencia de Desarrollo Web en Bilbao",
+        "url": "https://www.codigosa.es/agencia",
+        "description": "Conoce a Codigosa, una empresa de desarrollo web en Bilbao. Descubre nuestra misión, visión, y valores que nos distinguen. Contáctanos para saber más."
+      }
+    </script>
+  </slot>
+
+  <main slot="main">
+    <!-- PORTADA -->
+
+    <section class="portada-agencia" id="portada-agencia">
+      <div class="pelotaAmarilla-agencia pelota1-agencia"></div>
+      <div class="content-portada-agencia">
+        <h1>
+          Desarrolladores web <span class="bernadette amarillo">dedicados</span> y 
+          <span class="bernadette amarillo">creativos</span>
+
+        </h1>
+        <div id="fotosPortada-agencia">
+
+          <img class="foto-lonja-agencia"         
+          src="/img/imagenesLonja/grupal.webp"
+          alt="Foto grupal del equipo de Codigosa">
+          <img   src="/img/imagenesLonja/fotoTrabajando.webp"
+          alt="Equipo de Codigosa trabajando"
+          class="foto-trabajando-agencia">
+  
+        </div>
+        <div class="pelotaAmarilla-agencia pelota2-agencia"></div>
+      </div>
+    </section>
+
+    <!-- METODOLOGÍA -->
+
+    <section id="metodologiaSeccion-agencia">
+      <div id="titulo-agencia" class="animar">
+        <h2 id="p1-agencia">METODOLOGÍA</h2>
+        <h2 id="p2-agencia"><span class="bernadette">metodología</span></h2>
+      </div>
+
+      <section id="seccionTextosMetodologia-agencia" class="animar">
+        <article class="articulo1-agencia">
+
+
+          <img   src="/img/imagenesLonja/charla.webp"
+          alt="Desarrolladores reuniendose">
+          
+    
+          <div class="textoArticulo1-agencia">
+            <h3>Paso 1: Reunión Inicial</h3>
+            <p>
+              Nos reunimos contigo para entender tus necesidades y objetivos.
+              Esta fase es crucial para definir el alcance del proyecto y las
+              expectativas.
+            </p>
+          </div>
+        </article>
+
+        <article class="articulo2-agencia">
+
+       
+           <img   src="/img/imagenesLonja/pizarra.webp"
+           alt="Diseñadores UX y UI explicando la propuesta">
+    
+          <div class="textoArticulo2-agencia">
+            <h3>Paso 2: Propuesta y Diseño</h3>
+            <p>
+              Desarrollamos una propuesta detallada y un diseño preliminar que
+              se ajuste a tus requerimientos. Trabajamos contigo para refinar y
+              aprobar el diseño final.
+            </p>
+          </div>
+        </article>
+
+        <article class="articulo1-agencia">
+          <img src="/img/imagenesLonja/fotoTrabajando.webp" alt="Programadores trabajando" />
+          <div class="textoArticulo1-agencia">
+            <h3>Paso 3: Desarrollo</h3>
+            <p>
+              Nuestro equipo de desarrolladores crea el sitio web siguiendo las
+              mejores prácticas de codificación y asegurando la funcionalidad en
+              todos los dispositivos.
+            </p>
+          </div>
+        </article>
+
+        <article class="articulo2-agencia">
+          <img
+            src="/img/imagenesLonja/papeles.webp"
+            alt="Desarrolladores haciendo pruebas prelanzamiento"
+          />
+          <div class="textoArticulo2-agencia">
+            <h3>Paso 4: Pruebas y Lanzamiento</h3>
+            <p>
+              Realizamos pruebas exhaustivas para asegurar que todo funciona
+              correctamente. Después de tu aprobación, lanzamos el sitio web y
+              lo monitoreamos para garantizar su rendimiento.
+            </p>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!-- CARRUSEL -->
+
+    <section id="seccionCarrousellImagenes-agencia" class="animar">
+      <div class="carousel-agencia">
+        <div class="carousel-track-agencia">
+          <div class="carousel-slide-agencia">
+            <img src="/img/imagenesLonja/papeles.webp" alt="Imagen 1" />
+          </div>
+          <div class="carousel-slide-agencia">
+            <img src="/img/imagenesLonja/charla.webp" alt="Imagen 1" />
+          </div>
+          <div class="carousel-slide-agencia">
+            <img src="/img/imagenesLonja/calendario.webp" alt="Imagen 2" />
+          </div>
+          <div class="carousel-slide-agencia">
+            <img src="/img/imagenesLonja/papeles.webp" alt="Imagen 3" />
+          </div>
+          <div class="carousel-slide-agencia">
+            <img src="/img/imagenesLonja/charla.webp" alt="Imagen 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRANTES -->
+
+    <section id="seccionIntegrantes-agencia">
+      <div id="seccionTriangulos-agencia">
+        <div class="triangle1-agencia"></div>
+        <div class="triangle2-agencia"></div>
+      </div>
+
+      <div id="titulo-agencia" class="animar">
+        <h2 id="p1-agencia">INTEGRANTES</h2>
+        <h2 id="p2-agencia"><span class="bernadette">integrantes</span></h2>
+      </div>
+
+      <article class="cards-agencia">
+        <div class="container-card-agencia animar">
+          <div class="card-agencia">
+            <div
+              class="card-img-agencia"
+              style="background-image: url('/img/imagenesLonja/jon.webp');"
+            >
+            </div>
+
+            <a
+              class="overlay-agencia"
+              href="https://www.linkedin.com/in/jon-santolaria"
+              target="_blank"></a>
+
+            <a
+              class="card-info-agencia"
+              href="https://www.linkedin.com/in/jon-santolaria"
+              target="_blank"
+            >
+              <p class="text-title-agencia">Desarrollador Web</p>
+            </a>
+          </div>
+
+          <p>jon</p>
+        </div>
+
+        <div class="container-card-agencia animar">
+          <div class="card-agencia">
+            <div
+              class="card-img-agencia"
+              style="background-image: url('/img/imagenesLonja/dani.webp');"
+            >
+            </div>
+
+            <a
+              class="overlay-agencia"
+              href="https://www.linkedin.com/in/daniel-gomez-cuevas/"
+              target="_blank"></a>
+
+            <a
+              class="card-info-agencia"
+              href="https://www.linkedin.com/in/daniel-gomez-cuevas/"
+              target="_blank"
+            >
+              <p class="text-title-agencia">Desarrollador Web</p>
+              <p class="text-title-agencia">Diseñador Gráfico</p>
+            </a>
+          </div>
+
+          <p>dani</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</Layout>

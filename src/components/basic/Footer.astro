@@ -1,0 +1,18 @@
+---
+const { type } = Astro.props;
+---
+
+<footer id={`${type == "amarillo" ? "footerAmarillo" : ""}`}>
+  <section id="politicas">
+    <a href="/cookies"
+      >POLÍTICA DE COOKIES</a
+    ><span>|</span><a href="/avisolegal">AVISO LEGAL</a
+    ><span>|</span><a href="/privacidad"
+      >POLÍTICA DE PRIVACIDAD</a
+    >
+  </section>
+  <section id="derechos">
+    Todos los derechos reservados |
+    <span class="bernadette">CODIGOSA ©</span>
+  </section>
+</footer>
