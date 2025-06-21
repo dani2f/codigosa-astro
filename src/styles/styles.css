@@ -2377,6 +2377,8 @@ footer a {
 
 @media only screen and (min-width:768px) {
 
+    
+
     .content-portada-inicio {
         width: 90%;
     }
@@ -3427,6 +3429,10 @@ footer a {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .logo {
+        width: 85px;
+    }
 
     /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
 
