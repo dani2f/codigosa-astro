@@ -516,6 +516,10 @@ header.abajo span {
     transition-property: width, left;
 }
 
+.grid-box-inicio p {
+    font-size: 0.8rem;
+}
+
 /* Pelotas Servicios Inicio */
 
 .pelota1-inicio {
@@ -727,9 +731,6 @@ header.abajo span {
     color: #fff;
     text-align: center;
     height: 100vh;
-
-
-
 }
 
 .content-portada-agencia {
@@ -1960,16 +1961,16 @@ input[type="checkbox"] {
 
 .doc-legal div {
     width: 90%;
-    padding: 4rem 0 2rem 0;
+    padding: 6rem 0 2rem 0;
 }
 
 .doc-legal h1 {
-    font-size: 3rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
 .doc-legal h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-top: 3rem;
 }
 
@@ -2597,6 +2598,11 @@ footer a {
 
     .doc-legal div {
         padding: 8rem 0 4rem 0;
+    }
+
+    .doc-legal h1 {
+        font-size: 3rem;
+        text-align: center;
     }
 
     .doc-legal h2 {
@@ -3599,6 +3605,14 @@ footer a {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .h2fake-inicio {
+        font-size: 1rem;
+    }
+
+    .grid-box-inicio p {
+        font-size: inherit;
+    }
 
     .logo {
         width: 85px;
