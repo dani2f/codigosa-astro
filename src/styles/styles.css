@@ -2127,9 +2127,22 @@ footer a {
         font-size: 0.6rem;
     }
 
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(190% at 50% 350%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(195% at 50% 350%);
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
 }
 
 @media only screen and (min-width:425px) {
+
     #formulario-contacto {
         padding: 1.4rem;
     }
@@ -2145,6 +2158,51 @@ footer a {
     #footerAmarillo {
         font-size: 0.7rem;
     }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(170% at 50% 350%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(175% at 50% 350%);
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width:475px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(155% at 50% 350%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(160% at 50% 350%);
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width:540px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(140% at 50% 350%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(145% at 50% 350%);
+    }
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
 }
 
 @media only screen and (min-width:550px) {
@@ -2153,21 +2211,11 @@ footer a {
 
     /* SERVICIOS SERVICIOS */
 
-    .circle-servicios {
-        height: 16rem;
-    }
-
-    .circle2-servicios {
-        height: 16rem;
-    }
-
     .container-servicios2 h2 {
         width: 50vw;
-
     }
     .container-servicios h2 {
         width: 60vw;
-
     }
 
     /* SERVICIOS SERVICIOS */
@@ -2180,7 +2228,6 @@ footer a {
     /* AGENCIA / AGENCIA / AGENCIA */
 
     /* PORTADA AGENCIA */
-
 
     @keyframes movPelota1-agencia {
 
@@ -2215,19 +2262,41 @@ footer a {
     /* SERVICIOS / SERVICIOS / SERVICIOS */
 
     /* SERVICIOS PORTADA */
+
     .content-portada-servicios, .content-portada-proyectos{
         width: 80vw;
     }
+
     /* SERVICIOS PORTADA */
 
     /* SERVICIOS SERVICIOS */
 
     .circle-servicios {
-        height: 18rem;
+        clip-path: circle(130% at 50% 350%);
     }
 
     .circle2-servicios {
-        height: 18rem;
+        clip-path: circle(135% at 50% 350%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width:650px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(140% at 50% 400%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(145% at 50% 400%);
     }
 
     /* SERVICIOS SERVICIOS */
@@ -2365,21 +2434,41 @@ footer a {
 
     /* PROYECTOS / PROYECTOS / PROYECTOS */
 
-}
-
-@media only screen and (min-width: 750px) {
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
 
     /* SERVICIOS SERVICIOS */
 
     .circle-servicios {
-        height: 24rem;
+        clip-path: circle(150% at 50% 450%);
     }
 
     .circle2-servicios {
-        height: 21rem;
+        clip-path: circle(155% at 50% 450%);
     }
 
     /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 750px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(160% at 50% 500%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(165% at 50% 500%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
 
 }
 
@@ -2534,6 +2623,42 @@ footer a {
     /* SECCION BAJA CONTACTO */
 
     /* CONTACTO / CONTACTO / CONTACTO */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(150% at 50% 500%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(155% at 50% 500%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 850px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(145% at 50% 500%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(150% at 50% 500%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
 
 }
 
@@ -2876,22 +3001,14 @@ footer a {
 
     /* SERVICIOS / SERVICIOS / SERVICIOS */
 
-
-
     /* SERVICIOS SERVICIOS */
-
-
-
 
     .container-servicios2 h2 {
         width: 32vw;
-
     }
     .container-servicios h2 {
         width: 38vw;
-
     }
-    
 
     .container-servicios,
     .container-servicios2 {
@@ -2899,13 +3016,11 @@ footer a {
     }
 
     .circle-servicios {
-        height: 22rem;
-        clip-path: circle(200% at 50% 435%);
+        clip-path: circle(170% at 50% 600%);
     }
 
     .circle2-servicios {
-        height: 21rem;
-        clip-path: circle(200% at 50% 435%);
+        clip-path: circle(165% at 50% 600%);
     }
 
     /* Pelotas */
@@ -3304,6 +3419,59 @@ footer a {
 
 }
 
+@media only screen and (min-width: 940px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(190% at 50% 700%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(185% at 50% 700%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
+@media only screen and (min-width: 980px) {
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(205% at 50% 800%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(205% at 50% 800%);
+    }
+
+    @keyframes movPelota1-servicios {
+
+        0%,
+        100% {
+            transform: translateY(-140%);
+        }
+
+        50% {
+            transform: translateY(-150%);
+        }
+
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+}
+
 @media only screen and (min-width: 1000px) {
 
     /* AGENCIA / AGENCIA / AGENCIA */
@@ -3370,26 +3538,7 @@ footer a {
 
     /* AGENCIA / AGENCIA / AGENCIA */
 
-    /* SERVICIOS / SERVICIOS / SERVICIOS */
-
-
-    /* SERVICIOS SERVICIOS */
-
-    .circle-servicios {
-        clip-path: circle(200% at 50% 495%);
-    }
-
-    .circle2-servicios {
-        clip-path: circle(200% at 50% 490%);
-    }
-
-    /* SERVICIOS SERVICIOS */
-
-    /* SERVICIOS / SERVICIOS / SERVICIOS */
-
     /* PROYECTOS / PROYECTOS / PROYECTOS */
-
-
 
     /* PROYECTOS PROYECTOS */
 
@@ -3580,6 +3729,22 @@ footer a {
         width: 80%;
     }
 
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
+    /* SERVICIOS SERVICIOS */
+
+    .circle-servicios {
+        clip-path: circle(175% at 50% 700%);
+    }
+
+    .circle2-servicios {
+        clip-path: circle(175% at 50% 700%);
+    }
+
+    /* SERVICIOS SERVICIOS */
+
+    /* SERVICIOS / SERVICIOS / SERVICIOS */
+
 }
 
 @media only screen and (min-width: 1100px) {
@@ -3637,6 +3802,12 @@ footer a {
     }
 
     .circle-servicios {
+        height: 22rem;
+        clip-path: circle(205% at 50% 541%);
+    }
+
+    .circle2-servicios {
+        height: 21rem;
         clip-path: circle(205% at 50% 541%);
     }
 
@@ -3653,10 +3824,6 @@ footer a {
 
     .container-servicios2 p {
         font-size: 1.5em;
-    }
-
-    .circle2-servicios {
-        clip-path: circle(205% at 50% 541%);
     }
 
     /* Carrusel */
