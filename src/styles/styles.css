@@ -1959,18 +1959,18 @@ input[type="checkbox"] {
 }
 
 .doc-legal div {
-    width: 50vw;
-    padding: 8rem 0 4rem 0;
+    width: 90%;
+    padding: 4rem 0 2rem 0;
 }
 
 .doc-legal h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
 }
 
 .doc-legal h2 {
-    font-size: 2.5rem;
-    margin-top: 5rem;
+    font-size: 1.8rem;
+    margin-top: 3rem;
 }
 
 .doc-legal p, .doc-legal ul {
@@ -2387,7 +2387,6 @@ footer a {
 
     #formulario-contacto {
         padding: 2rem;
-       
     }
 
     .content-portada-inicio {
@@ -2505,6 +2504,21 @@ footer a {
 
     #footerAmarillo {
         font-size: 80%;
+    }
+
+    .doc-legal div {
+        width: 50vw;
+        padding: 8rem 0 4rem 0;
+    }
+
+    .doc-legal h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .doc-legal h2 {
+        font-size: 2.5rem;
+        margin-top: 5rem;
     }
 
 }
