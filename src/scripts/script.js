@@ -337,7 +337,6 @@ function createToastContent(alertType, text) {
   }
 
   function showToast(alertType, text) {
-  // Detectamos si estamos en móvil (puedes ajustar el breakpoint)
   const isMobile = window.matchMedia('(max-width: 600px)').matches;
 
   // Estilos base
@@ -346,29 +345,25 @@ function createToastContent(alertType, text) {
     color: "#fff",
     border: "0.5px solid #fff",
     display: "flex",
-    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
+    justifyContent: "space-between",
     boxShadow: "none",
     borderRadius: "0.35rem",
+    overflow: "hidden",
+    padding: "0",            // ya no metemos paddingInline aquí
   };
 
-  // Estilos de tamaño + límite de ancho
+  // Tamaño fijo: sin paddingInline
   const sizeStyle = isMobile
     ? {
         height: "2.2rem",
-        padding: 0,
-        paddingInline: "0.5rem",
         fontSize: "0.75rem",
-        maxWidth: "90vw",    // no más del 90% del viewport
+        maxWidth: "90vw",
       }
     : {
         height: "3rem",
-        padding: 0,
-        paddingInline: "0.8rem",
         fontSize: "1rem",
-        maxWidth: "350px",   // no más de 350px en desktop
+        maxWidth: "350px",
       };
 
   Toastify({
@@ -380,24 +375,42 @@ function createToastContent(alertType, text) {
     style: { ...baseStyle, ...sizeStyle },
   }).showToast();
 
-  // Ajustes extra al botón de cerrar
-  setTimeout(() => {
-    document.querySelectorAll(".toast-close").forEach((btn) => {
-      btn.style.padding = "0";
-      btn.style.marginLeft = isMobile ? "20px" : "40px";
-      btn.style.fontSize = isMobile ? "0.7em" : "0.8em";
-      btn.style.height = "100%";
-      btn.style.borderLeft = "1px solid #fff5";
-      btn.style.paddingLeft = "0.7rem";
-    });
-  }, 100);
-
-  // Fuerza el layout flex (por si acaso)
   setTimeout(() => {
     document.querySelectorAll(".toastify").forEach((toast) => {
-      toast.style.display = "flex";
-      toast.style.flexDirection = "row";
-      toast.style.justifyContent = "center";
+      // Aseguramos ancho
+      if (isMobile) toast.style.width = "90vw";
+      else toast.style.maxWidth = "350px";
+
+      // Bloque de contenido: icono + texto
+      const content = toast.querySelector(".toastify-content") || toast.firstChild;
+      if (content) {
+        content.style.display = "flex";
+        content.style.alignItems = "center";
+        content.style.justifyContent = "flex-start";
+        content.style.flex = "1 1 auto";
+        content.style.minWidth = "0";
+        // Aquí aplicamos el espaciado interno:
+        content.style.paddingLeft = isMobile ? "0.5rem" : "0.8rem";
+        content.style.paddingRight = isMobile ? "0.5rem" : "0.8rem";
+      }
+
+      // Bloque cuadrado de la X
+      const closeBtn = toast.querySelector(".toast-close");
+      if (closeBtn) {
+        const blockSize = isMobile ? "2.2rem" : "3rem";
+        Object.assign(closeBtn.style, {
+          flex: "0 0 auto",
+          width: blockSize,
+          height: blockSize,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxSizing: "border-box",
+          borderLeft: "1px solid #fff5",
+          padding: "0",
+          margin: "0",
+        });
+      }
     });
   }, 100);
 }
