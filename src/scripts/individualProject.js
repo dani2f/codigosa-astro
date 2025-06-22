@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function animateSibling(sibling, sectionIndex, index, visible) {
         const mode = getDeviceMode();
         let config;
-        console.log(mode);
+
 
         if (mode === 'mobile') {
             // Sólo se animan los hermanos 0 y 1 en móvil (tal como en el código original)
