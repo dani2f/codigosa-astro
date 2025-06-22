@@ -2507,13 +2507,7 @@ footer a {
     }
 
     .doc-legal div {
-        width: 50vw;
         padding: 8rem 0 4rem 0;
-    }
-
-    .doc-legal h1 {
-        font-size: 4rem;
-        text-align: center;
     }
 
     .doc-legal h2 {
@@ -3578,6 +3572,14 @@ footer a {
 
     /* PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES / PROYECTOS INDIVIDUALES */
 
+    .doc-legal h1 {
+        font-size: 3.5rem;
+    }
+
+    .doc-legal div {
+        width: 80%;
+    }
+
 }
 
 @media only screen and (min-width: 1100px) {
@@ -4634,6 +4636,10 @@ footer a {
     /* PORTADA CONTACTO */
 
     /* CONTACTO / CONTACTO / CONTACTO */
+
+    .doc-legal div {
+        width: 50%;
+    }
 
 }
 
