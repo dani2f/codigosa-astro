@@ -1533,6 +1533,7 @@ header.abajo span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-inline:1rem;
 }
 
 #seccionPortadaDecorado-contacto h1 {
@@ -1564,6 +1565,7 @@ header.abajo span {
 /* Formulario */
 
 #formulario-contacto {
+    box-sizing: border-box;
     background-color: #141414;
     box-shadow: 0rem 0rem 1.5rem #0008;
     border-radius: 1rem;
@@ -1572,8 +1574,8 @@ header.abajo span {
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
-    padding: 2rem;
-    width: 80%;
+    padding: 1rem;
+    width: 90%;
     height: 100%;
     font-weight: 100;
 }
@@ -1590,7 +1592,7 @@ header.abajo span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .cajaTexto-contacto {
@@ -1602,13 +1604,14 @@ header.abajo span {
 .cajaTexto-contacto select {
     text-align: left;
     width: 2rem;
-    width: 96%;
+    width: 100%;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .cajaTexto-contacto select {
     height: 2.8rem;
-    width: 97.5%;
+    width: 100%;
     padding-left: 5px;
 }
 
@@ -1619,7 +1622,7 @@ header.abajo span {
 
 .cajaTexto-contacto label,
 .cajaTexto-contacto input {
-    width: 95%;
+    width: 100%;
 }
 
 .cajaTexto-contacto input,
@@ -1644,6 +1647,7 @@ input[type="checkbox"] {
 }
   
 .cajaTexto-contacto option {
+    box-sizing: border-box;
     background: #141414;
     border-radius: 0.5rem;
     padding-block: 4rem;
@@ -1651,10 +1655,11 @@ input[type="checkbox"] {
 }
 
 .cajaTexto2-contacto textarea {
+    box-sizing: border-box;
     background: transparent;
     border: #fff solid 0.1rem;
     border-radius: 0.5rem;
-    width: 95%;
+    width: 100%;
     color: #fff;
     padding: 8px 0 0 10px;
 }
@@ -1675,7 +1680,7 @@ input[type="checkbox"] {
 
 #button-contacto {
     width: 100%;
-    padding: 15px;
+    padding: 9px;
     border: unset;
     border-radius: 0.5rem;
     color: #212121;
@@ -2125,6 +2130,9 @@ footer a {
 }
 
 @media only screen and (min-width:425px) {
+    #formulario-contacto {
+        padding: 1.4rem;
+    }
 
     .unique-project h2 {
         font-size: 2.7em;
@@ -2377,7 +2385,10 @@ footer a {
 
 @media only screen and (min-width:768px) {
 
-    
+    #formulario-contacto {
+        padding: 2rem;
+       
+    }
 
     .content-portada-inicio {
         width: 90%;
@@ -3209,19 +3220,20 @@ footer a {
         box-shadow: 0rem 0rem 1.5rem #0008;
         border-radius: 1rem;
         gap: 1.5rem;
-        padding: 2rem;
+        padding: 1.5rem;
         width: 100%;
-        height: 115%;
+        height: 100%;
         font-weight: 100;
     }
 
     .cajaTexto-contacto label,
     .cajaTexto-contacto input {
-        width: 95.5%;
+        width:100%;
+        font-size: 0.9rem;
     }
 
     .cajaTexto2-contacto textarea {
-        width: 98%;
+        width: 100%;
     }
 
     .cajaTexto-contacto select {
@@ -3231,6 +3243,7 @@ footer a {
     .bloqueForm1-contacto {
         flex-direction: row;
         align-items: flex-end;
+        gap: 3rem;
     }
 
     /* PORTADA CONTACTO */
@@ -3554,6 +3567,14 @@ footer a {
 }
 
 @media only screen and (min-width: 1100px) {
+
+    
+    #formulario-contacto {
+
+        height: 123%;
+     
+    }
+  
 
     /* SERVICIOS / SERVICIOS / SERVICIOS */
 

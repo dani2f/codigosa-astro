@@ -337,35 +337,51 @@ function createToastContent(alertType, text) {
   }
 
   function showToast(alertType, text) {
+
+    // Detectamos si estamos en móvil (puedes ajustar el breakpoint)
+    const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
+    // Definimos estilos base y sus variantes móviles
+    const baseStyle = {
+      background: "#171717",
+      color: "#fff",
+      border: "0.5px solid #fff",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      boxShadow: "none",
+      borderRadius: "0.35rem",
+    };
+    const sizeStyle = isMobile
+      ? {
+          height: "2.2rem",
+          padding: 0,
+          paddingInline: "0.5rem",
+          fontSize: "0.75rem",
+        }
+      : {
+          height: "3rem",
+          padding: 0,
+          paddingInline: "0.8rem",
+          fontSize: "1rem",
+        };
+
     Toastify({
       node: createToastContent(alertType, text), // Cada llamada crea un nodo nuevo
       duration: 3000, // Duración en ms
       gravity: "bottom", // "top" o "bottom"
       position: "right", // "left", "center" o "right"      
       close: true, // Mostrar botón de cierre
-      style: {
-        padding: 0,
-        background: "#171717",
-        color: "#fff",
-        border: "0.5px solid #fff",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        height: "3rem",
-        paddingInline: "0.8rem",
-        boxShadow: "none",
-        borderRadius: "0.35rem",     
-    
-      },
+      style: { ...baseStyle, ...sizeStyle },
     }).showToast();
 
     setTimeout(() => {
       document.querySelectorAll(".toast-close").forEach((btn) => {
         btn.style.padding = "0";
-        btn.style.marginLeft = "40px";
-        btn.style.fontSize = "0.8em";
+        btn.style.marginLeft = isMobile ? "20px" : "40px";
+        btn.style.fontSize = isMobile ? "0.7em" : "0.8em";
         btn.style.height = "100%";
         btn.style.borderLeft = "1px solid #fff5";
         btn.style.paddingLeft = "0.7rem";
