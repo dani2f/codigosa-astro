@@ -13,11 +13,28 @@ const { typeFooter } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    
     <link
       rel="icon"
       href="/img/logos/logoPequenoBlanco.svg"
-      type="image/x-icon"
+      type="image/svg+xml"
     />
+
+    <link
+		rel="icon"
+		type="image/svg+xml"
+		href="/img/logos/logoPequenoNegro.svg"
+		media="(prefers-color-scheme: light)"
+		/>
+    
+		<link
+		rel="icon"
+		type="image/svg+xml"
+		href="/img/logos/logoPequenoBlanco.svg"
+		media="(prefers-color-scheme: dark)"
+		/>
+
+
    
     <meta property="og:image" content="/img/logos/logoPequenoNegro.png" />
     <meta name="twitter:image" content="/img/logos/logoPequenoNegro.png" />
