@@ -1,10 +1,8 @@
 ---
 import Header from "../components/basic/Header.astro";
 import Footer from "../components/basic/Footer.astro";
-import "../styles/styles.css"
+import "../styles/styles.css";
 const { typeFooter } = Astro.props;
-
-
 ---
 
 <!doctype html>
@@ -13,29 +11,30 @@ const { typeFooter } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/img/logos/logoPequenoNegro.svg"
+      media="(prefers-color-scheme: light)"
+    />
+
     <link
       rel="icon"
       href="/img/logos/logoPequenoBlanco.svg"
       type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
     />
 
     <link
-		rel="icon"
-		type="image/svg+xml"
-		href="/img/logos/logoPequenoNegro.svg"
-		media="(prefers-color-scheme: light)"
-		/>
-    
-		<link
-		rel="icon"
-		type="image/svg+xml"
-		href="/img/logos/logoPequenoBlanco.svg"
-		media="(prefers-color-scheme: dark)"
-		/>
+      rel="icon"
+      type="image/svg+xml"
+      href="/img/logos/logoPequenoBlanco.svg"
+      media="(prefers-color-scheme: dark)"
+    />
 
-
-   
     <meta property="og:image" content="/img/logos/logoPequenoNegro.png" />
     <meta name="twitter:image" content="/img/logos/logoPequenoNegro.png" />
 
@@ -55,6 +54,5 @@ const { typeFooter } = Astro.props;
     <script src="../scripts/individualProject.js"></script>
     <script src="../scripts/script.js"></script>
     <Footer type=`${typeFooter}` />
-
   </body>
 </html>
